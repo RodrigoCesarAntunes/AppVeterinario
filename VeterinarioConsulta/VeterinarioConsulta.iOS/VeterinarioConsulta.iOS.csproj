@@ -169,4 +169,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\home%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pets%40x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pets%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\configuracoes%40x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\configuracoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\configuracoes%40x2.png" />
+  </ItemGroup>
 </Project>

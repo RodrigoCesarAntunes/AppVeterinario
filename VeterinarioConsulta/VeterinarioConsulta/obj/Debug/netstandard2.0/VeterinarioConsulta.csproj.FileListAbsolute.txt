@@ -23,3 +23,5 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\n
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\Paginas\Mapa.xaml.g.cs
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\Paginas\Mascotes.xaml.g.cs
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\Paginas\Configuracoes.xaml.g.cs

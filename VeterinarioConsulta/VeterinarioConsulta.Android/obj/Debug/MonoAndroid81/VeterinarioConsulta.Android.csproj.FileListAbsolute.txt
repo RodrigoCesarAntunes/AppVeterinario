@@ -115,5 +115,17 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable\pets.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-hdpi\pets.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xhdpi\pets.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\pets.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\pets.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable\configuracoes.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-hdpi\configuracoes.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xhdpi\configuracoes.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xxhdpi\configuracoes.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\res\drawable-xxxhdpi\configuracoes.png
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\bin\Debug\netstandard2.0\VeterinarioConsulta.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\linksrc\VeterinarioConsulta.Android.pdb
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\bin\Debug\VeterinarioConsulta.dll.mdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\linksrc\VeterinarioConsulta.dll.mdb
