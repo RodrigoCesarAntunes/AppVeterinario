@@ -5,8 +5,8 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:paginas="clr-namespace:VeterinarioConsulta.Paginas"
             x:Class="VeterinarioConsulta.Paginas.Home">
-  <!--Pages can be added as references or inline-->
 
+    <!--Aqui vão as paginas e seus respctivos icones--> 
     <paginas:Mapa Icon="home.png"/>
     <paginas:Mascotes Icon="pets.png"/>
     <paginas:Configuracoes Icon="configuracoes.png" />
