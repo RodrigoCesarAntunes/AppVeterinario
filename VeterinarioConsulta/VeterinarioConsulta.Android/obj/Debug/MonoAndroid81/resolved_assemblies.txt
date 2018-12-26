@@ -28,9 +28,15 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Maps.Android.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Maps.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Base.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Basement.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Maps.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.GooglePlayServices.Tasks.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\System.Runtime.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\System.ComponentModel.Composition.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\System.Diagnostics.Debug.dll

@@ -308,11 +308,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -804,11 +819,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -1301,11 +1331,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -1622,11 +1667,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -2118,11 +2178,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -2615,11 +2690,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -3111,11 +3201,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -3608,11 +3713,26 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Maps/3.4.0.1008975": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.4.0.1008975"
+        },
+        "compile": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll": {},
+          "lib/uap10.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "VeterinarioConsulta/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.4.0.1008975"
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Xamarin.Forms.Maps": "3.4.0.1008975"
         },
         "compile": {
           "bin/placeholder/VeterinarioConsulta.dll": {}
@@ -7430,6 +7550,37 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.Maps/3.4.0.1008975": {
+      "sha512": "XqMqivFWe9n5xoT3MuUG1s9sKe5tGpWdnHSarurxS2pSWRK0vuzWHdIBIUxJbe/nPSeAUzOI4HuvtHBhixxrbQ==",
+      "type": "package",
+      "path": "xamarin.forms.maps/3.4.0.1008975",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.Design.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.Design.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.3.4.0.1008975.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "VeterinarioConsulta/1.0.0": {
       "type": "project",
       "path": "../VeterinarioConsulta/VeterinarioConsulta.csproj",
@@ -7440,7 +7591,8 @@
     "UAP,Version=v10.0.16299": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.9",
       "VeterinarioConsulta >= 1.0.0",
-      "Xamarin.Forms >= 3.4.0.1008975"
+      "Xamarin.Forms >= 3.4.0.1008975",
+      "Xamarin.Forms.Maps >= 3.4.0.1008975"
     ]
   },
   "packageFolders": {
@@ -7489,6 +7641,10 @@
             "version": "[6.1.9, )"
           },
           "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[3.4.0.1008975, )"
+          },
+          "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[3.4.0.1008975, )"
           }

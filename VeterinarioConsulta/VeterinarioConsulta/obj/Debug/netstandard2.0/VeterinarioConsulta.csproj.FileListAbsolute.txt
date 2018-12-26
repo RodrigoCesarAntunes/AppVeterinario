@@ -19,7 +19,7 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\n
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.csproj.CoreCompileInputs.cache
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.AssemblyInfoInputs.cache
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.AssemblyInfo.cs
-C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\VeterinarioConsulta.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\Paginas\Mapa.xaml.g.cs
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\obj\Debug\netstandard2.0\XamlC.stamp
