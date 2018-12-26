@@ -125,5 +125,7 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\bin\Debug\netstandard2.0\VeterinarioConsulta.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\linksrc\VeterinarioConsulta.Android.pdb
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\bin\Debug\VeterinarioConsulta.dll.mdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.Android\obj\Debug\MonoAndroid81\linksrc\VeterinarioConsulta.dll.mdb
