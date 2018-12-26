@@ -98,9 +98,10 @@ C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPh
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Maps.dll
+C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Maps.iOS.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\VeterinarioConsulta.dll
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\VeterinarioConsulta.pdb
-C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\bin\iPhoneSimulator\Debug\VeterinarioConsulta.dll.mdb
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items

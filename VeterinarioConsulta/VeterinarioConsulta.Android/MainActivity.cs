@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V4.Content;
+using Android.Support.V4.App;
+using Android;
 
 namespace VeterinarioConsulta.Droid
 {
@@ -21,6 +24,22 @@ namespace VeterinarioConsulta.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            string permission = Manifest.Permission.AccessFineLocation;
+
+            if (ContextCompat.CheckSelfPermission(this, permission) != Permission.Granted)
+            {
+                ActivityCompat.RequestPermissions(this, new string[]
+                { Manifest.Permission.AccessCoarseLocation, Manifest.Permission.AccessFineLocation}, 0);
+            }
+            else
+            {
+                System.Diagnostics.Debug.Print("Permissão concedida");
+            }
         }
     }
 }

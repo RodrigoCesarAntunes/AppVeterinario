@@ -13,6 +13,8 @@ namespace VeterinarioConsulta.Paginas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Mapa : ContentPage
 	{
+        private Map mapa = null;
+
 		public Mapa ()
 		{
 			InitializeComponent ();
@@ -21,10 +23,18 @@ namespace VeterinarioConsulta.Paginas
 
         private void IniciarMapa()
         {
-            var mapa = new Map(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
+            mapa = new Map(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
                 Distance.FromKilometers(2)));
+            mapa.MapType = MapType.Street;
             StackMapa.Children.Add(mapa);
+            
             //mapa.MoveToRegion[];
+        }
+        
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            mapa.IsShowingUser = true;
         }
     }
 }

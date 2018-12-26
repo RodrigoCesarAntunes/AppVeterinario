@@ -532,6 +532,12 @@
     <AppxPackagedFile Include="C:\Users\Rodrigo\.nuget\packages\xamarin.forms\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodrigo\.nuget\packages\xamarin.forms.maps\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Maps.UWP.dll">
+      <PackagePath>Xamarin.Forms.Maps.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodrigo\.nuget\packages\xamarin.forms.maps\3.4.0.1008975\lib\uap10.0\Xamarin.Forms.Maps.dll">
+      <PackagePath>Xamarin.Forms.Maps.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta\bin\Debug\netstandard2.0\VeterinarioConsulta.dll">
       <PackagePath>VeterinarioConsulta.dll</PackagePath>
     </AppxPackagedFile>
