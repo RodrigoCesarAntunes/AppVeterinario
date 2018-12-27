@@ -7,5 +7,7 @@ bin/
 obj/
 *.userprefs
 .packages
+.vs/
+
 
 # End of https://www.gitignore.io/api/xamarinstudio
