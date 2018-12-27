@@ -8,6 +8,5 @@ obj/
 *.userprefs
 .packages
 VeterinarioConsulta/.vs/**
-
-
+.vs/VeterinarioConsulta/v15/Server
 # End of https://www.gitignore.io/api/xamarinstudio
