@@ -1,1 +1,0 @@
-C:\Repos\VeterinarioConsulta\VeterinarioConsulta\VeterinarioConsulta.UWP\VeterinarioConsulta.UWP.csproj;x86
