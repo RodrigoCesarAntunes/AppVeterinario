@@ -148,6 +148,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="SuaveControls.FloatingActionButton">
+      <Version>2018.1.5</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugin.Geolocator">
       <Version>4.5.0.6</Version>
     </PackageReference>
@@ -189,5 +192,35 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\configuracoes%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\womenWithDog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close%40x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\close%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add%40x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pin%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pin%40x3.png" />
   </ItemGroup>
 </Project>

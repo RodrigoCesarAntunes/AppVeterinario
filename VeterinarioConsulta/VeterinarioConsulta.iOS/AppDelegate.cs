@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using SuaveControls.FloatingActionButton.iOS.Renderers;
 using UIKit;
 
 namespace VeterinarioConsulta.iOS
@@ -25,6 +26,8 @@ namespace VeterinarioConsulta.iOS
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
             LoadApplication(new App());
+
+            FloatingActionButtonRenderer.InitRenderer();
 
             return base.FinishedLaunching(app, options);
         }

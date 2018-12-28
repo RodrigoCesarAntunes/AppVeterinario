@@ -61,8 +61,10 @@ namespace VeterinarioConsulta.Paginas
                 {
                     Position = new Position(e.Latitude, e.Longitude),
                     Label = "Clique Aqui para mais informações",
+                    
                     Address = e.Endereco + " " + e.Numero
                 };
+                
                 pin.Clicked += OnPinClicado;
                 mapa.Pins.Add(pin);
                 return pin;
