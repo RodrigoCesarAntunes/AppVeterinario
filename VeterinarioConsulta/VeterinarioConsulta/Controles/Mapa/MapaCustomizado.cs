@@ -16,5 +16,7 @@ namespace VeterinarioConsulta.Controles.Mapa
         {
 
         }
+
+        public List<PinCustomizado> PinsCustomizados { get; set; }
     }
 }

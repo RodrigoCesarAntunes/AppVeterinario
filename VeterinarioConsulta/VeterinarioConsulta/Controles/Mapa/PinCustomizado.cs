@@ -7,6 +7,9 @@ namespace VeterinarioConsulta.Controles.Mapa
 {
     public class PinCustomizado: Pin
     {
-
+        public int ID { get; set; }
+        public Pin Pin { get; set; }
+        public string PinImagem { get; set; }
+        public string PinPosicao { get; set; }
     }
 }

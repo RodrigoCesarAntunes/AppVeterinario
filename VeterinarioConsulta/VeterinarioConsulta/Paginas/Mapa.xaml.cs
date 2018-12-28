@@ -9,34 +9,42 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using VeterinarioConsulta.Servicos;
+using VeterinarioConsulta.Controles.Mapa;
 
 namespace VeterinarioConsulta.Paginas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Mapa : ContentPage
-	{
-        private Map mapa = null;
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Mapa : ContentPage
+    {
+        private MapaCustomizado mapa = null;
 
-		public Mapa ()
-		{
-			InitializeComponent ();
+        public Mapa()
+        {
+            InitializeComponent();
             IniciarMapa();
         }
 
         private void IniciarMapa()
         {
-            mapa = new Map(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
+            mapa = new MapaCustomizado(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
                 Distance.FromKilometers(2)));
+            mapa.Focused += Mapa_Focused;
             mapa.MapType = MapType.Street;
-            StackMapa.Children.Add(mapa);
+            stackMapa.Children.Add(mapa);
             MostrarEstabelecimentos();
             //mapa.MoveToRegion[];
         }
-        
+
+        private void Mapa_Focused(object sender, FocusEventArgs e)
+        {
+            stackInfo.IsVisible = false;
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
             mapa.IsShowingUser = true;
+            stackInfo.IsVisible = false;
         }
 
         private void MostrarEstabelecimentos()
@@ -48,19 +56,28 @@ namespace VeterinarioConsulta.Paginas
             var enderecos = enderecoServico.ObterTodos();
 
             enderecos.Select(e =>
+            {
+                var pin = new Pin()
                 {
-                    var pin = new Pin();
-                    mapa.Pins.Add(new Pin()
-                    {
-                        Position = new Position(e.Latitude, e.Longitude),
-                        Label = "Consultorio 1",
-                        Address = e.Endereco + " " + e.Numero
-                    });
-                    return pin;
-                }
-            ).ToList();
-
+                    Position = new Position(e.Latitude, e.Longitude),
+                    Label = "Clique Aqui para mais informações",
+                    Address = e.Endereco + " " + e.Numero
+                };
+                pin.Clicked += OnPinClicado;
+                mapa.Pins.Add(pin);
+                return pin;
+            }).ToList();
             
+        }
+        
+        protected void OnPinClicado(object sender, EventArgs args)
+        {
+            stackInfo.IsVisible = true;
+        }
+
+        private void CloseImageButton_Clicked(object sender, EventArgs e)
+        {
+            stackInfo.IsVisible = false;
         }
     }
 }
