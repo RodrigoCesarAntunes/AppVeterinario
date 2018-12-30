@@ -23,9 +23,7 @@ namespace VeterinarioConsulta.Droid.Renderers
         
         public TextBoxPadraoRenderer(Context context)
             : base(context)
-        {
-            //IsInevalido();
-        }
+        {}
 
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
@@ -44,15 +42,16 @@ namespace VeterinarioConsulta.Droid.Renderers
 
         private void FormatarControle()
         {
+            if (Control == null)
+                return;
 
             var gradientDrawable = new GradientDrawable();
-            gradientDrawable.SetCornerRadius(10f);
-
+            gradientDrawable.SetCornerRadius(50f);
             gradientDrawable.SetStroke(5, CorDaLinha());
             gradientDrawable.SetColor(Android.Graphics.Color.White);
 
             Control.SetBackground(gradientDrawable);
-            Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
+            Control.SetPadding(40, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);   
         }
 
         private Android.Graphics.Color CorDaLinha()
@@ -64,6 +63,9 @@ namespace VeterinarioConsulta.Droid.Renderers
 
         private void DefinirCor()
         {
+            if (Control == null)
+                return;
+
             var gradientDrawable = new GradientDrawable();
             gradientDrawable.SetStroke(5, CorDaLinha());
             Control.SetBackground(gradientDrawable);

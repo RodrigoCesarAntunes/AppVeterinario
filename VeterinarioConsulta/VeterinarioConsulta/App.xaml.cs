@@ -11,7 +11,7 @@ namespace VeterinarioConsulta
         {
             InitializeComponent();
 
-            MainPage = new Paginas.Home();
+            MainPage = new Paginas.Login();
         }
 
         protected override void OnStart()
