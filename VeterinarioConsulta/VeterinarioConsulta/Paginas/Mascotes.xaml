@@ -2,10 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
              x:Class="VeterinarioConsulta.Paginas.Mascotes">
     <ContentPage.Content>
         <StackLayout x:Name="StackMascotes">
             <Label>Mascotes vão aqui</Label>
+            <textbox:TextBoxPadrao x:Name="txtPadrao" ></textbox:TextBoxPadrao>
+
+            <Button Clicked="Button_Clicked" ></Button>
+
 
             <controls:FloatingActionButton x:Name="FAB" HorizontalOptions="EndAndExpand"
                                            WidthRequest="100" HeightRequest="100"  

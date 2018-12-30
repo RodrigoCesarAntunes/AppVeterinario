@@ -16,5 +16,10 @@ namespace VeterinarioConsulta.Paginas
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            txtPadrao.IsInvalido = !txtPadrao.IsInvalido;
+        }
+    }
 }
