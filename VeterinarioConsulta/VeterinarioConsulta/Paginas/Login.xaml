@@ -8,7 +8,7 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20*"/>
-                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="60*"/>
                 <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
 
@@ -18,14 +18,14 @@
                 <RowDefinition Height="35*"/>
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Column="1" Grid.Row="1">
+            <StackLayout Grid.Column="1" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <textbox:TextBoxPadrao Placeholder="E-mail" Keyboard="Email" />
                 <textbox:TextBoxPadrao Placeholder="Senha" Keyboard="Default" IsPassword="True" />
                 <Button Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar"/>
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="2">
-                
+                <Image Source="google_dark_focus.png" x:Name="BtnLoginComGoogle"/>
             </StackLayout>
         </Grid>
         

@@ -27,18 +27,12 @@ namespace VeterinarioConsulta.Paginas
         private void IniciarMapa()
         {
             mapa = new MapaCustomizado(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
-                Distance.FromKilometers(2)));
-            mapa.Focused += Mapa_Focused;
+                Distance.FromKilometers(1)));
             mapa.MapType = MapType.Street;
             stackMapa.Children.Add(mapa);
             MostrarEstabelecimentos();
-            //mapa.MoveToRegion[];
         }
 
-        private void Mapa_Focused(object sender, FocusEventArgs e)
-        {
-            stackInfo.IsVisible = false;
-        }
 
         protected override void OnAppearing()
         {
@@ -61,8 +55,7 @@ namespace VeterinarioConsulta.Paginas
                 {
                     Position = new Position(e.Latitude, e.Longitude),
                     Label = "Clique Aqui para mais informações",
-                    
-                    Address = e.Endereco + " " + e.Numero
+                    Address = e.Endereco + ", " + e.Numero
                 };
                 
                 pin.Clicked += OnPinClicado;

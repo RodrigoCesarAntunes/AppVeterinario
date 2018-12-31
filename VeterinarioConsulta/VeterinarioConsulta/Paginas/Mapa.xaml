@@ -21,7 +21,7 @@
 
                 <Image Grid.Row="1" Grid.Column="0" Source="womenWithDog.png"  HorizontalOptions="StartAndExpand"  HeightRequest="80" WidthRequest="70"></Image>
                 <Label Grid.Row="0" Grid.Column="1" Text="Consultorio 1" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Grid.Row="0" Grid.Column="2" x:Name="ibtnClose" Source="close.png" HorizontalOptions="CenterAndExpand" WidthRequest="30" Clicked="CloseImageButton_Clicked"></ImageButton>
+                <ImageButton Grid.Row="0" Grid.Column="2" x:Name="ibtnClose" Source="close.png" BackgroundColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="30" Clicked="CloseImageButton_Clicked"></ImageButton>
 
                 <StackLayout Grid.Row="1" Grid.Column="1"  Padding="0">
                     <Label FontSize="Small">Serviços: Vascinação, Castração, Exames gerais, Emergenciasa</Label>

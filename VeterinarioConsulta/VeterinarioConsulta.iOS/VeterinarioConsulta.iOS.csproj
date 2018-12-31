@@ -224,4 +224,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\pin%40x3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\google_dark_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\google_dark_focus%40x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\google_dark_focus%40x3.png" />
+  </ItemGroup>
 </Project>

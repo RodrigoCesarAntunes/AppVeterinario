@@ -9,9 +9,8 @@ namespace VeterinarioConsulta.Controles.Mapa
     {
         public MapaCustomizado(MapSpan mapSpan)
             :base(mapSpan)
-        {
+        {}
 
-        }
         public MapaCustomizado()
         {
 

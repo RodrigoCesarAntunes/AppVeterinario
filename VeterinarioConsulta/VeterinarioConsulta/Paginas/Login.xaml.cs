@@ -15,11 +15,24 @@ namespace VeterinarioConsulta.Paginas
 		public Login ()
 		{
 			InitializeComponent ();
-		}
+            IniciarBotoesDeLogin();
+        }
 
         private void btnEntrar_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new Home();
+        }
+
+        private void IniciarBotoesDeLogin()
+        {
+            var tapRecognizerGoogle = new TapGestureRecognizer();
+            tapRecognizerGoogle.Tapped += (s, ar) => BtnLoginComGoogle_Clicado();
+            BtnLoginComGoogle.GestureRecognizers.Add(tapRecognizerGoogle);
+        }
+
+        private void BtnLoginComGoogle_Clicado()
+        {
+            DisplayAlert("teste","google clicado", "cancelar");
         }
     }
 }
