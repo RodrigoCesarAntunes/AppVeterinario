@@ -233,4 +233,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\google_dark_focus%40x3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\entrarComFacebook.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\entrarComFacebook%40x2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\entrarComFacebook%40x3.PNG" />
+  </ItemGroup>
 </Project>

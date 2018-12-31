@@ -18,6 +18,36 @@
                     <RowDefinition Height="30*"/>
                 </Grid.RowDefinitions>
 
+                <StackLayout Grid.Column="0" Grid.Row="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="0" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="2" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="2" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image  Source="pets.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Image  Source="pets.png" HorizontalOptions="End" VerticalOptions="End"/>
+                </StackLayout>
+
                 <StackLayout Grid.Column="1" Grid.Row="0" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                     <Image Source="Logo.png"/>
                 </StackLayout>
