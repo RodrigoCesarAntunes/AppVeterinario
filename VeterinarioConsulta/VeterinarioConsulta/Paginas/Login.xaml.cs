@@ -20,7 +20,11 @@ namespace VeterinarioConsulta.Paginas
 
         private void btnEntrar_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new Home();
+            if(lblInvalido.IsVisible == true)
+                App.Current.MainPage = new Home();
+
+            lblInvalido.IsVisible = true;
+            
         }
 
         private void IniciarBotoesDeLogin()

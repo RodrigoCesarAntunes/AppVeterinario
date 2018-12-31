@@ -4,30 +4,38 @@
              xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
              x:Class="VeterinarioConsulta.Paginas.Login">
     <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20*"/>
-                <ColumnDefinition Width="60*"/>
-                <ColumnDefinition Width="20*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30*"/>
-                <RowDefinition Height="35*"/>
-                <RowDefinition Height="35*"/>
-            </Grid.RowDefinitions>
+                <StackLayout Grid.Column="1" Grid.Row="0" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Source="Logo.png"/>
+                </StackLayout>
 
-            <StackLayout Grid.Column="1" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <textbox:TextBoxPadrao Placeholder="E-mail" Keyboard="Email" />
-                <textbox:TextBoxPadrao Placeholder="Senha" Keyboard="Default" IsPassword="True" />
-                <Button Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar"/>
-            </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <textbox:TextBoxPadrao Placeholder="E-mail" Keyboard="Email"/>
+                    <textbox:TextBoxPadrao Placeholder="Senha" Keyboard="Default" IsPassword="True" />
+                    <Label Text="E-mail e/ou senha invalidos" x:Name="lblInvalido" 
+                       FontSize="Small" TextColor="Red" IsVisible="False"></Label>
+                    <Label Text=" " />
+                    <Button Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" 
+                        BorderColor="Black" BackgroundColor="White" BorderWidth="2" BorderRadius="10"/>
+                </StackLayout>
 
-            <StackLayout Grid.Column="1" Grid.Row="2">
-                <Image Source="google_dark_focus.png" x:Name="BtnLoginComGoogle"/>
-            </StackLayout>
-        </Grid>
-        
+                <StackLayout Grid.Column="1" Grid.Row="2">
+                    <Image Source="google_dark_focus.png" x:Name="BtnLoginComGoogle"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

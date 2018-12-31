@@ -28,9 +28,16 @@ namespace VeterinarioConsulta.Paginas
         {
             mapa = new MapaCustomizado(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
                 Distance.FromKilometers(1)));
+
+            //var gestureRecognized = new TapGestureRecognizer();
+            //gestureRecognized.Tapped += (o, ar) => EsconderInformacoes();
+            //mapa.GestureRecognizers.Add(gestureRecognized);
+
             mapa.MapType = MapType.Street;
             stackMapa.Children.Add(mapa);
             MostrarEstabelecimentos();
+
+           
         }
 
 
@@ -48,7 +55,7 @@ namespace VeterinarioConsulta.Paginas
 
             var enderecoServico = new EnderecosServico();
             var enderecos = enderecoServico.ObterTodos();
-
+            
             enderecos.Select(e =>
             {
                 var pin = new Pin()
@@ -67,12 +74,23 @@ namespace VeterinarioConsulta.Paginas
         
         protected void OnPinClicado(object sender, EventArgs args)
         {
-            stackInfo.IsVisible = true;
+            MostrarInformacoes();
         }
 
         private void CloseImageButton_Clicked(object sender, EventArgs e)
         {
+            EsconderInformacoes();
+        }
+
+        private void MostrarInformacoes()
+        {
+            stackInfo.IsVisible = true;
+        }
+
+        private void EsconderInformacoes()
+        {
             stackInfo.IsVisible = false;
         }
+
     }
 }
