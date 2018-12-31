@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:botao="clr-namespace:VeterinarioConsulta.Controles.Botao"
              x:Class="VeterinarioConsulta.Paginas.Mapa">
     <ContentPage.Content>
         <StackLayout x:Name="stackContainer" Padding="0">
             <StackLayout x:Name="stackMapa" Padding="0" 
                          HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 
-            <Grid  x:Name="stackInfo"  Margin="0"
+            <Grid  x:Name="stackInfo"  Margin="0" BackgroundColor="White"
                    IsVisible="false">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*" />
@@ -26,7 +27,7 @@
                 <StackLayout Grid.Row="1" Grid.Column="1"  Padding="0">
                     <Label FontSize="Small">Serviços: Vascinação, Castração, Exames gerais, Emergenciasa</Label>
                     <!--<Label FontSize="Small">Atendimento: Segunda á domingo, 24h/dia</Label>-->
-                    <Button Text="Ver" HeightRequest="40" WidthRequest="20"  />
+                    <botao:BotaoPadrao Text="Ver" HeightRequest="40" WidthRequest="20"  />
                 </StackLayout>
             </Grid>
         </StackLayout>

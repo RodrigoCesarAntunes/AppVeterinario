@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
+             xmlns:botao="clr-namespace:VeterinarioConsulta.Controles.Botao"
              x:Class="VeterinarioConsulta.Paginas.Login">
     <ContentPage.Content>
         <ScrollView>
@@ -58,8 +59,8 @@
                     <Label Text="E-mail e/ou senha invalidos" x:Name="lblInvalido" 
                        FontSize="Small" TextColor="Red" IsVisible="False"></Label>
                     <Label Text=" " />
-                    <Button Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" 
-                        BorderColor="Black" BackgroundColor="White" BorderWidth="2" BorderRadius="10"/>
+                    <botao:BotaoPadrao Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" />
+
                 </StackLayout>
 
                 <StackLayout Grid.Column="1" Grid.Row="2">
