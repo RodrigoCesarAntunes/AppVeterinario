@@ -72,7 +72,8 @@ namespace VeterinarioConsulta.Controles.TextBox
             {
                 TextoAviso = "Preenchimento Obrigatório!";
                 IsInvalido = true;
-            }else
+            }
+            else if(IsInvalido)
             {
                 IsInvalido = false;
             }
