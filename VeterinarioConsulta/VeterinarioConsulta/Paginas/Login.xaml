@@ -56,11 +56,13 @@
                 <StackLayout Grid.Column="1" Grid.Row="1" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <textbox:TextBoxPadrao Placeholder="E-mail" Keyboard="Email"/>
                     <textbox:TextBoxPadrao Placeholder="Senha" Keyboard="Default" IsPassword="True" />
-                    <Label Text="E-mail e/ou senha invalidos" x:Name="lblInvalido" 
+                    <Label Text="E-mail e/ou senha invalidos" x:Name="lblInvalido" Margin="0,-8,0,0" 
                        FontSize="Small" TextColor="Red" IsVisible="False"></Label>
-                    <Label Text=" " />
-                    <botao:BotaoPadrao Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" />
-
+                    <botao:BotaoPadrao Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" Margin="0,1,0,0" />
+                    <Label x:Name="lblCriarConta" Text="Criar Conta" HorizontalOptions="CenterAndExpand"  Margin="0,1,0,0"
+                           FontAttributes="Italic" TextColor="Black" FontSize="Medium" />
+                    <BoxView BackgroundColor="Black" x:Name="BoxUnderline"
+                             HeightRequest="1" Margin="0,-8,0,0" HorizontalOptions="Center"/>
                 </StackLayout>
 
                 <StackLayout Grid.Column="1" Grid.Row="2">

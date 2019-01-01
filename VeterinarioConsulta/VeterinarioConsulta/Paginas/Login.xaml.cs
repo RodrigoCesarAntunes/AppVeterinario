@@ -32,6 +32,13 @@ namespace VeterinarioConsulta.Paginas
             var tapRecognizerGoogle = new TapGestureRecognizer();
             tapRecognizerGoogle.Tapped += (s, ar) => BtnEntrarCom_Clicado();
             BtnLoginComGoogle.GestureRecognizers.Add(tapRecognizerGoogle);
+
+            // Essa logica é para que o tamanho da borda a baixo do 
+            // label Criar Conta seja igual a do label
+            BoxUnderline.WidthRequest = (70 * 1.3);
+
+            var tapRecognizerCriarConta = new TapGestureRecognizer();
+            tapRecognizerCriarConta.Tapped += (s, ar) => { };
         }
 
         private void BtnEntrarCom_Clicado()
