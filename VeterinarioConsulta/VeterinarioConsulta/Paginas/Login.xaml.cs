@@ -16,6 +16,7 @@ namespace VeterinarioConsulta.Paginas
 		{
 			InitializeComponent ();
             IniciarBotoesDeLogin();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void btnEntrar_Clicked(object sender, EventArgs e)
@@ -39,7 +40,10 @@ namespace VeterinarioConsulta.Paginas
             
 
             var tapRecognizerCriarConta = new TapGestureRecognizer();
-            tapRecognizerCriarConta.Tapped += (s, ar) => { };
+            tapRecognizerCriarConta.Tapped += (s, ar) => 
+            {
+                Navigation.PushAsync( new Cadastro.CriarConta() { Title = "Criar Conta"});
+            };
             lblCriarConta.GestureRecognizers.Add(tapRecognizerCriarConta);
         }
 

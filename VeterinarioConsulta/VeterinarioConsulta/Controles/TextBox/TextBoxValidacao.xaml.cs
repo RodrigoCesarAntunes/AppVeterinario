@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using VeterinarioConsulta.Utils;
 
 namespace VeterinarioConsulta.Controles.TextBox
 {
@@ -16,8 +17,8 @@ namespace VeterinarioConsulta.Controles.TextBox
         public TextBoxValidacao()
         {
             InitializeComponent();
-            txtPadrao.Unfocused += (s, ar) => VerificarTxtVazio();
-            txtPadrao.TextChanged += (s, ar) => VerificarTxtVazio();
+            txtPadrao.Unfocused += (s, ar) => VerificarTxt();
+            txtPadrao.TextChanged += (s, ar) => VerificarTxt();
         }
         #endregion
 
@@ -57,25 +58,50 @@ namespace VeterinarioConsulta.Controles.TextBox
             set { lblInvalido.Text = value; }
         }
 
-        public bool AutoValidacao {get; set;}
+        public bool IsPassword
+        {
+            get { return txtPadrao.IsPassword; }
+            set { txtPadrao.IsPassword = value; }
+        }
 
+        public bool AutoValidacao { get; set; } = false;
+        public bool EmailValidacao { get; set; }
         #endregion
 
         #region Metodos
 
-        private void VerificarTxtVazio()
+        private void VerificarTxt()
         {
-            if (!AutoValidacao)
-                return;
+            if (EmailValidacao)
+                ValidarEmail();
+            else if (AutoValidacao)
+                ValidarVazio();
+        }
 
-            if(string.IsNullOrWhiteSpace(txtPadrao.Text))
+        private void ValidarVazio()
+        {
+            if (string.IsNullOrWhiteSpace(txtPadrao.Text))
             {
                 TextoAviso = "Preenchimento Obrigatório!";
                 IsInvalido = true;
             }
-            else if(IsInvalido)
+            else if (IsInvalido)
             {
                 IsInvalido = false;
+            }
+        }
+
+        private void ValidarEmail()
+        {
+            var Validar = new Validar();
+            if(Validar.Email(txtPadrao.Text))
+            {
+                IsInvalido = false;
+            }
+            else
+            {
+                TextoAviso = "Email invalido!";
+                IsInvalido = true;
             }
         }
 
