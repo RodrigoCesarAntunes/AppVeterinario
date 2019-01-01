@@ -8,7 +8,9 @@ namespace VeterinarioConsulta.Utils
     {
         public bool Email(string email)
         {
-            if (email.Length < 5)
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+            else if (email.Length < 5)
                 return false;
             else if (!email.Contains("@") && !email.Contains("."))
                 return false;

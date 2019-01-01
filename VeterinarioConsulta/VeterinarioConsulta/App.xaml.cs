@@ -11,7 +11,8 @@ namespace VeterinarioConsulta
         {
             InitializeComponent();
 
-            MainPage = new Paginas.Login();
+            MainPage = new NavigationPage(new Paginas.Login())
+            { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White};
         }
 
         protected override void OnStart()
