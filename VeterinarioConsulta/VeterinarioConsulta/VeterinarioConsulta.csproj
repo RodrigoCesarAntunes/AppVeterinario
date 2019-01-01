@@ -17,6 +17,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Controles\TextBox\TextBoxValidacao.xaml.cs">
+      <DependentUpon>TextBoxValidacao.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Controles\TextBox\TextBoxValidacao.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Paginas\Configuracoes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

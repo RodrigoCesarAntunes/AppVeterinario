@@ -8,7 +8,9 @@
     <ContentPage.Content>
         <StackLayout x:Name="StackMascotes">
             <Label>Mascotes vão aqui</Label>
-            <textbox:TextBoxPadrao x:Name="txtPadrao" ></textbox:TextBoxPadrao>
+
+            <textbox:TextBoxValidacao x:Name="txtValidacao" Placeholder="Teste" Keyboard="Email" AutoValidacao="True" />
+            <textbox:TextBoxValidacao x:Name="txtPadrao" Placeholder="Teste" Keyboard="Email" />
 
             <botao:BotaoPadrao Clicked="Button_Clicked" Text="Alterar propriedade isvaldo"></botao:BotaoPadrao>
 

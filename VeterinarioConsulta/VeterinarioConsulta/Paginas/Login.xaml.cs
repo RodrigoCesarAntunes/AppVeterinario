@@ -35,10 +35,12 @@ namespace VeterinarioConsulta.Paginas
 
             // Essa logica é para que o tamanho da borda a baixo do 
             // label Criar Conta seja igual a do label
-            BoxUnderline.WidthRequest = (70 * 1.3);
+            BoxUnderline.WidthRequest = (lblCriarConta.Width * 1.3);
+            
 
             var tapRecognizerCriarConta = new TapGestureRecognizer();
             tapRecognizerCriarConta.Tapped += (s, ar) => { };
+            lblCriarConta.GestureRecognizers.Add(tapRecognizerCriarConta);
         }
 
         private void BtnEntrarCom_Clicado()
