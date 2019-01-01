@@ -15,6 +15,27 @@ namespace VeterinarioConsulta.Paginas.Cadastro
 		public CriarConta ()
 		{
 			InitializeComponent ();
-		}
-	}
+            DefinirFoco();
+        }
+
+        private void DefinirFoco()
+        {
+            txtNome.TextBoxPadrao.Completed += (s, ar) => txtSobrenome.TextBoxPadrao.Focus();
+            txtSobrenome.TextBoxPadrao.Completed += (s, ar) => txtEmail.TextBoxPadrao.Focus();
+            txtEmail.TextBoxPadrao.Completed += (s, ar) => txtNascimento.TextBoxPadrao.Focus();
+            txtNascimento.TextBoxPadrao.Completed += (s, ar) => txtSenha.TextBoxPadrao.Focus();
+            txtSenha.TextBoxPadrao.Completed += (s, ar) => txtConfirmarSenha.TextBoxPadrao.Focus();
+            txtConfirmarSenha.TextBoxPadrao.Completed += (s, ar) => ExecutarCriarConta();
+        }
+
+        private void btnCriarConta_Clicked(object sender, EventArgs e)
+        {
+            ExecutarCriarConta();
+        }
+
+        private void ExecutarCriarConta()
+        {
+
+        }
+    }
 }

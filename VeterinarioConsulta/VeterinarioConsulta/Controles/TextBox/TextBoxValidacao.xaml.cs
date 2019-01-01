@@ -24,6 +24,11 @@ namespace VeterinarioConsulta.Controles.TextBox
 
         #region Propriedades
 
+        public TextBoxPadrao TextBoxPadrao
+        {
+            get { return txtPadrao; }
+        }
+
         public bool IsInvalido
         {
             get { return txtPadrao.IsInvalido; }

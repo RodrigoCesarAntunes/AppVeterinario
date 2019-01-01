@@ -30,7 +30,7 @@
                     <textbox:TextBoxValidacao x:Name="txtSenha" Placeholder="Senha" AutoValidacao="True" IsPassword="True"/>
                     <textbox:TextBoxValidacao x:Name="txtConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True"/>
 
-                    <botao:BotaoPadrao x:Name="btnCriarConta" Text="Criar Conta" Margin="0,1,0,0"/>
+                    <botao:BotaoPadrao x:Name="btnCriarConta" Clicked="btnCriarConta_Clicked" Text="Criar Conta" Margin="0,1,0,0"/>
                 </StackLayout>
             </Grid>
         </ScrollView>
