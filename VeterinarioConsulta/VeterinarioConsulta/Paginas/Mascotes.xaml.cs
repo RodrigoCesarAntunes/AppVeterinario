@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VeterinarioConsulta.Servicos;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,11 +15,25 @@ namespace VeterinarioConsulta.Paginas
 		public Mascotes ()
 		{
 			InitializeComponent ();
-		}
+            IniciarList();
+        }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        
+
+        public void IniciarList()
         {
-            txtPadrao.IsInvalido = !txtPadrao.IsInvalido;
+            var animais = new AnimaisServico().ObterTodos();
+            listMascotes.ItemsSource = animais;
+
+            listMascotes.ItemSelected += ItemSelecionado;
+        }
+
+        private void ItemSelecionado(object sender, SelectedItemChangedEventArgs args)
+        {
+            if (args.SelectedItem == null)
+                return;
+
+            (sender as ListView).SelectedItem = null;
         }
     }
 }
