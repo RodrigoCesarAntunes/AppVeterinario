@@ -33,6 +33,8 @@ namespace VeterinarioConsulta.Paginas
                 return;
 
             var animal = args.SelectedItem as Animal;
+            AnimaisServico.AnimalAtual = animal;
+
             Navigation.PushAsync(new MascotePerfil() { Title = animal.Nome});
 
             (sender as ListView).SelectedItem = null;

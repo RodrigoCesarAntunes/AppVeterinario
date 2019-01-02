@@ -7,6 +7,8 @@ namespace VeterinarioConsulta.Servicos
 {
     public class AnimaisServico
     {
+        public static Animal AnimalAtual { get; set; }
+
         public List<Animal> ObterTodos()
         {
             var animais = new List<Animal>()

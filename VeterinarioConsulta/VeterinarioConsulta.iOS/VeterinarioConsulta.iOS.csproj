@@ -243,4 +243,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\entrarComFacebook%40x3.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editar%40x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\editar%40x2.png" />
+  </ItemGroup>
 </Project>
