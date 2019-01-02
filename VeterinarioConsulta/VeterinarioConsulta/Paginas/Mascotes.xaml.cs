@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VeterinarioConsulta.Modelos;
 using VeterinarioConsulta.Servicos;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,9 +18,7 @@ namespace VeterinarioConsulta.Paginas
 			InitializeComponent ();
             IniciarList();
         }
-
         
-
         public void IniciarList()
         {
             var animais = new AnimaisServico().ObterTodos();
@@ -32,6 +31,9 @@ namespace VeterinarioConsulta.Paginas
         {
             if (args.SelectedItem == null)
                 return;
+
+            var animal = args.SelectedItem as Animal;
+            Navigation.PushAsync(new MascotePerfil() { Title = animal.Nome});
 
             (sender as ListView).SelectedItem = null;
         }
