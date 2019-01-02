@@ -22,7 +22,7 @@ namespace VeterinarioConsulta.Paginas
         private void btnEntrar_Clicked(object sender, EventArgs e)
         {
             if(lblInvalido.IsVisible == true)
-                App.Current.MainPage = new Home();
+                App.Current.MainPage = new NavigationPage(new Home()) { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White };
 
             lblInvalido.IsVisible = true;
             

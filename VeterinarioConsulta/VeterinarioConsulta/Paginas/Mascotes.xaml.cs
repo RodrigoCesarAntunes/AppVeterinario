@@ -35,5 +35,10 @@ namespace VeterinarioConsulta.Paginas
 
             (sender as ListView).SelectedItem = null;
         }
+
+        private void AddMascote_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Cadastro.AdicionarMascote() { Title = "Novo Mascote"});
+        }
     }
 }

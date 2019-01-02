@@ -15,6 +15,7 @@ namespace VeterinarioConsulta.Paginas
         public Home ()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
