@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
              x:Class="VeterinarioConsulta.Paginas.MascotePerfil">
     
     <ContentPage.ToolbarItems>
@@ -25,12 +26,12 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    
+
                     <Image Source="cat.png" HorizontalOptions="Center" Margin="0,5,0,0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label x:Name="lblNome" Text="Nome: Bola" VerticalOptions="Start" HorizontalOptions="Start" />
-                        <Label x:Name="lblEspecie" Text="Especie: Coelho" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  />
+                        <textbox:TextBoxValidacao Titulo="True" TituloTexto="Nome:"
+                                                  Altura="30" Largura="175" Text="Bola" ReadOnly="True" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -48,9 +49,7 @@
                     </StackLayout>
 
                 </StackLayout>
-
             </Grid>
-            
             
         </ScrollView>
     </ContentPage.Content>

@@ -51,10 +51,36 @@ namespace VeterinarioConsulta.Controles.TextBox
             set { txtPadrao.Placeholder = value; }
         }
 
+        public double Largura
+        {
+            get { return txtPadrao.Width; }
+            set
+            {
+                txtPadrao.WidthRequest = value;
+                txtPadrao.MinimumWidthRequest = value;
+            }
+        }
+
+        public double Altura
+        {
+            get { return txtPadrao.Height; }
+            set
+            {
+                txtPadrao.HeightRequest = value;
+                txtPadrao.MinimumHeightRequest = value;
+            }
+        }
+
         public string Text
         {
             get { return txtPadrao.Text; }
             set { txtPadrao.Text = value; }
+        }
+
+        public bool ReadOnly
+        {
+            get { return txtPadrao.InputTransparent; }
+            set { txtPadrao.InputTransparent = value; }
         }
 
         public string TextoAviso
@@ -67,6 +93,18 @@ namespace VeterinarioConsulta.Controles.TextBox
         {
             get { return txtPadrao.IsPassword; }
             set { txtPadrao.IsPassword = value; }
+        }
+
+        public bool Titulo
+        {
+            get { return lblTitulo.IsVisible; }
+            set { lblTitulo.IsVisible = value; }
+        }
+
+        public string TituloTexto
+        {
+            get { return lblTitulo.Text; }
+            set { lblTitulo.Text = value; }
         }
 
         public bool AutoValidacao { get; set; } = false;

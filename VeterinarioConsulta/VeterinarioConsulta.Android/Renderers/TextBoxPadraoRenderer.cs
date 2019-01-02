@@ -46,12 +46,12 @@ namespace VeterinarioConsulta.Droid.Renderers
                 return;
 
             var gradientDrawable = new GradientDrawable();
-            gradientDrawable.SetCornerRadius(50f);
+            gradientDrawable.SetCornerRadius(20);
             gradientDrawable.SetStroke(5, CorDaLinha());
             gradientDrawable.SetColor(Android.Graphics.Color.White);
 
             Control.SetBackground(gradientDrawable);
-            Control.SetPadding(40, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);   
+            Control.SetPadding(40, 15, Control.PaddingRight, 15);   
         }
 
         private Android.Graphics.Color CorDaLinha()

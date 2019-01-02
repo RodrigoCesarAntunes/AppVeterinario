@@ -27,9 +27,9 @@ namespace VeterinarioConsulta.Paginas
             var animal = AnimaisServico.AnimalAtual;
 
             lblDescricao.Text = "Descrição: " + animal.Descricao;
-            lblEspecie.Text = "Espécie: " + animal.Especie;
+            //lblEspecie.Text = "Espécie: " + animal.Especie;
             lblIdade.Text = "idade: " + animal.Idade;
-            lblNome.Text = "Nome: " + animal.Nome;
+            //lblNome.Text = "Nome: " + animal.Nome;
             lblPeso.Text = "Peso: " + animal.Peso + "KG";
             lblRaca.Text = "Raça: " + animal.Raca;
             lblTamanho.Text = "Tamanho: " + animal.Tamanho;

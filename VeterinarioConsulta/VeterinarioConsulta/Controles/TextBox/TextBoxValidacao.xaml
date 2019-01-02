@@ -5,6 +5,7 @@
              x:Class="VeterinarioConsulta.Controles.TextBox.TextBoxValidacao">
   <ContentView.Content>
       <StackLayout>
+            <Label x:Name="lblTitulo" FontAttributes="Bold" FontSize="Small" IsVisible="False" Margin="0, 0, 0, -6"/>
             <textbox:TextBoxPadrao x:Name="txtPadrao"/>
             <Label x:Name="lblInvalido" IsVisible="False" 
                    Text="Valor inválido" TextColor="Red" Margin="0,-8,0,0"/>
