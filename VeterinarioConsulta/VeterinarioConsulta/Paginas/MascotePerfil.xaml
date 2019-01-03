@@ -3,54 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
              x:Class="VeterinarioConsulta.Paginas.MascotePerfil">
-    
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="editar.png" Text="Editar" Clicked="ToolbarEditar_Clicked" />
+        <ToolbarItem Text="Editar" Icon="editar.png" Clicked="ToolbarEditar_Clicked" />
     </ContentPage.ToolbarItems>
-        
-        
+
+
     <ContentPage.Content>
         <ScrollView>
-        
+
             <Grid x:Name="gridContainer">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
-                    <ColumnDefinition Width="90*" />
+                    <ColumnDefinition Width="45*" />
+                    <ColumnDefinition Width="45*" />
                     <ColumnDefinition Width="5*" />
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="10*"/>
                     <RowDefinition Height="60*"/>
                 </Grid.RowDefinitions>
 
-                <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image Source="cat.png" HorizontalOptions="Center" Margin="0,5,0,0" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-                    <Image Source="cat.png" HorizontalOptions="Center" Margin="0,5,0,0"/>
+                <StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                    <StackLayout Orientation="Horizontal">
-                        <textbox:TextBoxValidacao Titulo="True" TituloTexto="Nome:"
-                                                  Altura="30" Largura="175" Text="Bola" ReadOnly="True" />
-                    </StackLayout>
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Nome:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="Bola" ReadOnly="False" />
+                    
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Raça:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="Lebre" ReadOnly="True" />
 
-                    <StackLayout Orientation="Horizontal">
-                        <Label x:Name="lblRaca" Text="Raça: Lebre" VerticalOptions="Start" HorizontalOptions="Start" />
-                        <Label x:Name="lblIdade" Text="Idade: 1 ano" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Label x:Name="lblTamanho" Text="Tamanho: Medio" VerticalOptions="Start" HorizontalOptions="Start" />
-                        <Label x:Name="lblPeso" Text="Peso: 1KG" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Label x:Name="lblDescricao" Text="Descricao: Coelho de porte médio, estressado"/>
-                    </StackLayout>
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Tamanho:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="Medio" ReadOnly="True" />
 
                 </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Especie:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="Coelho" ReadOnly="True" />
+
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Idade:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="1 ano" ReadOnly="True" />
+
+                    <textbox:TextBoxValidacao Titulo="True" TituloTexto="Peso:"
+                                                  Altura="25" Largura="155" FontSize="15" Text="1KG" ReadOnly="True" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="Descricao:" />
+                    <Editor x:Name="editDescricao" Text="Coelho de porte médio, estressado" AutoSize="TextChanges" Margin="0,-5,0,0"/>
+                </StackLayout>
+
             </Grid>
-            
+
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

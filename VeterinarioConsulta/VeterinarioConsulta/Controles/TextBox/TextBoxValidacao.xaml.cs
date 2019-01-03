@@ -71,6 +71,12 @@ namespace VeterinarioConsulta.Controles.TextBox
             }
         }
 
+        public double FontSize
+        {
+            get { return txtPadrao.FontSize; }
+            set { txtPadrao.FontSize = value; }
+        }
+
         public string Text
         {
             get { return txtPadrao.Text; }

@@ -51,7 +51,7 @@ namespace VeterinarioConsulta.Droid.Renderers
             gradientDrawable.SetColor(Android.Graphics.Color.White);
 
             Control.SetBackground(gradientDrawable);
-            Control.SetPadding(40, 15, Control.PaddingRight, 15);   
+            Control.SetPadding(30, 15, Control.PaddingRight, 10);   
         }
 
         private Android.Graphics.Color CorDaLinha()
