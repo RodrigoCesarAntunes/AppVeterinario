@@ -26,7 +26,7 @@ namespace VeterinarioConsulta.iOS
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
             LoadApplication(new App());
-
+            
             FloatingActionButtonRenderer.InitRenderer();
 
             return base.FinishedLaunching(app, options);
