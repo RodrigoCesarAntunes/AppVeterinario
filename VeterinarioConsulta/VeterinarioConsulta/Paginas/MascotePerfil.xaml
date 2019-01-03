@@ -56,7 +56,9 @@
 
                 <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                     <Label Text="Descricao:" />
-                    <Editor x:Name="editDescricao" Text="Coelho de porte médio, estressado" AutoSize="TextChanges" Margin="0,-5,0,0"/>
+                    <textbox:TextBoxMultiLinhas x:Name="editDescricao" AutoSize="TextChanges" Margin="0,-5,0,0" FontSize="15"
+                                                Text="Coelho de porte médio, pelo escuro, bem bravo"
+                                                />
                 </StackLayout>
 
             </Grid>

@@ -93,6 +93,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\BotaoPadraoRenderer.cs" />
+    <Compile Include="Renderers\TextBoxMultiLinhasRenderer.cs" />
     <Compile Include="Renderers\TextBoxPadraoRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />

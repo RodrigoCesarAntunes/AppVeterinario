@@ -69,6 +69,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\BotaoPadraoRenderer.cs" />
     <Compile Include="Renderers\MapaCustomizadoRenderer.cs" />
+    <Compile Include="Renderers\TextBoxMultiLinhasRenderer.cs" />
     <Compile Include="Renderers\TextBoxPadraoRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

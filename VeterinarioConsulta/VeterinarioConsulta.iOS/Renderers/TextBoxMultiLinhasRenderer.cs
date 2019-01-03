@@ -10,32 +10,32 @@ using VeterinarioConsulta.iOS.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(TextBoxPadrao), typeof(TextBoxPadraoRenderer))]
+[assembly: ExportRenderer(typeof(TextBoxMultiLinhas), typeof(TextBoxMultiLinhasRenderer))]
 namespace VeterinarioConsulta.iOS.Renderers
 {
-    public class TextBoxPadraoRenderer: EntryRenderer
+    public class TextBoxMultiLinhasRenderer : EditorRenderer
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Editor> e)
         {
             base.OnElementChanged(e);
 
             Element.PropertyChanged += (o, ar) => DefinirCor();
 
-            if(e.OldElement == null)
+            if (e.OldElement == null)
             {
                 Control.Layer.CornerRadius = 10;
                 Control.Layer.BorderWidth = 2f;
                 Control.Layer.BorderColor = VerificarValidade();
                 Control.Layer.BackgroundColor = Color.White.ToCGColor();
 
-                Control.LeftView = new UIKit.UIView(new CGRect(0, 0, 10, 0));
+                 //= new UIView(new CGRect(0, 0, 10, 0));
                 //Control.LeftViewMode = new UITextFieldViewMode.Always;
             }
         }
 
         private CGColor VerificarValidade()
         {
-            var TextBoxPadrao = (TextBoxPadrao)Element;
+            var TextBoxPadrao = (TextBoxMultiLinhas)Element;
             return TextBoxPadrao.IsInvalido ?
                 Color.Red.ToCGColor() : Color.DimGray.ToCGColor();
         }
