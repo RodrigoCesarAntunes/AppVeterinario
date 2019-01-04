@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VeterinarioConsulta.Paginas.ConsultorioPerfil">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <Grid x:Name="gridContainer">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="45*" />
+                    <ColumnDefinition Width="45*" />
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="60*"/>
+                </Grid.RowDefinitions>
+
+                <Frame  BorderColor="LightGray" Padding="5" BackgroundColor="Transparent" CornerRadius="10" HeightRequest="120" WidthRequest="120"
+                        HorizontalOptions="Center" Margin="0,5,0,0" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2">
+                    <Image Source="womenWithDog.png" Aspect="AspectFit" />
+                </Frame>
+
+
+                <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label x:Name="lblEndereco" Text="Endereço: rua xxx" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="Descricao:" x:Name="lblDescricao" />
+                </StackLayout>
+                <Label Text="Fotos"  TextColor="DimGray" Grid.Row="3" Grid.Column="1" HorizontalOptions="Start" Grid.ColumnSpan="2"/>
+                <BoxView Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="DimGray" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

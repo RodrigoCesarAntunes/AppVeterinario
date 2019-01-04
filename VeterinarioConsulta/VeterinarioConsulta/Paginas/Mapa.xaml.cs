@@ -92,5 +92,9 @@ namespace VeterinarioConsulta.Paginas
             stackInfo.IsVisible = false;
         }
 
+        private void BtnVer_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ConsultorioPerfil() { Title="Consultorio 1"});
+        }
     }
 }

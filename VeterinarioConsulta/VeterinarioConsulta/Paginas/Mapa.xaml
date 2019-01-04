@@ -27,7 +27,7 @@
                 <StackLayout Grid.Row="1" Grid.Column="1"  Padding="0">
                     <Label FontSize="Small">Serviços: Vascinação, Castração, Exames gerais, Emergenciasa</Label>
                     <!--<Label FontSize="Small">Atendimento: Segunda á domingo, 24h/dia</Label>-->
-                    <botao:BotaoPadrao Text="Ver" HeightRequest="40" WidthRequest="20"  />
+                    <botao:BotaoPadrao x:Name="btnVer" Text="Ver" HeightRequest="40" WidthRequest="20" Clicked="BtnVer_Clicked" />
                 </StackLayout>
             </Grid>
         </StackLayout>
