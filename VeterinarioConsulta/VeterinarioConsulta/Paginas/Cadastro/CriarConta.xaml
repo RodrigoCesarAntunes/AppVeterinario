@@ -22,12 +22,12 @@
                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
                 <StackLayout Grid.Column="1" Grid.Row="1">
-                    <textbox:TextBoxValidacao x:Name="txtNome" AutoValidacao="True" Placeholder="Nome"/>
-                    <textbox:TextBoxValidacao x:Name="txtSobrenome" AutoValidacao="True" Placeholder="Sobrenome"/>
-                    <textbox:TextBoxValidacao x:Name="txtEmail" Placeholder="E-mail" EmailValidacao="True"/>
-                    <textbox:TextBoxValidacao x:Name="txtNascimento" 
-                                          AutoValidacao="True" Placeholder="Data de Nascimento"/>
-                    <textbox:TextBoxValidacao x:Name="txtSenha" Placeholder="Senha" AutoValidacao="True" IsPassword="True"/>
+                    <textbox:TextBoxValidacao x:Name="txtNome" ValidarDado="Vazio" Placeholder="Nome"/>
+                    <textbox:TextBoxValidacao x:Name="txtSobrenome" ValidarDado="Vazio" Placeholder="Sobrenome"/>
+                    <textbox:TextBoxValidacao x:Name="txtEmail" Placeholder="E-mail" ValidarDado="Email"/>
+                    <textbox:TextBoxValidacao x:Name="txtNascimento" Keyboard="Numeric"
+                                          ValidarDado="Data" Placeholder="Data de Nascimento"/>
+                    <textbox:TextBoxValidacao x:Name="txtSenha" Placeholder="Senha" ValidarDado="Vazio" IsPassword="True"/>
                     <textbox:TextBoxValidacao x:Name="txtConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True"/>
 
                     <botao:BotaoPadrao x:Name="btnCriarConta" Clicked="btnCriarConta_Clicked" Text="Criar Conta" Margin="0,1,0,0"/>

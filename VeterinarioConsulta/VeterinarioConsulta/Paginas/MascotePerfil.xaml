@@ -37,7 +37,7 @@
                 <StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                     <textbox:TextBoxValidacao Titulo="True" TituloTexto="Nome:" x:Name="txtNome"
-                                                  Altura="25" Largura="155" FontSize="15" Text="Bola"  />
+                                                  Altura="25" Largura="155" FontSize="15" Text="Bola" ValidarDado="Vazio"  />
                                                                                                        
                     <textbox:TextBoxValidacao Titulo="True" TituloTexto="Raça:" x:Name="txtRaca"       
                                                   Altura="25" Largura="155" FontSize="15" Text="Lebre"  />

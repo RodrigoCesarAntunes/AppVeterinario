@@ -17,8 +17,8 @@ namespace VeterinarioConsulta.Controles.TextBox
         public TextBoxValidacao()
         {
             InitializeComponent();
-            txtPadrao.Unfocused += (s, ar) => VerificarTxt();
-            txtPadrao.TextChanged += (s, ar) => VerificarTxt();
+            txtPadrao.Focused += (s, ar) => VerificarTxt();
+            
         }
         #endregion
 
@@ -113,18 +113,76 @@ namespace VeterinarioConsulta.Controles.TextBox
             set { lblTitulo.Text = value; }
         }
 
-        public bool AutoValidacao { get; set; } = false;
-        public bool EmailValidacao { get; set; }
+        //public bool AutoValidacao { get; set; } = false;
+        /// <summary>
+        /// Valores que podem ser passados:
+        /// Email, Vazio (verifica se o campo é vazio), Data
+        /// </summary>
+        public TiposDeValidacao ValidarDado { get; set; } = TiposDeValidacao.Nada;
         #endregion
 
         #region Metodos
 
         private void VerificarTxt()
         {
-            if (EmailValidacao)
-                ValidarEmail();
-            else if (AutoValidacao)
-                ValidarVazio();
+            if (ValidarDado == TiposDeValidacao.Nada)
+                return;
+
+            switch (ValidarDado)
+            {
+                case TiposDeValidacao.Email:
+                    txtPadrao.Unfocused += (s, ar) => ValidarEmail();
+                    txtPadrao.TextChanged += (s, ar) => ValidarEmail();
+                    txtPadrao.MaxLength = 255;
+                    break;
+                case TiposDeValidacao.Vazio:
+                    txtPadrao.Unfocused += (s, ar) => ValidarVazio();
+                    txtPadrao.TextChanged += (s, ar) => ValidarVazio();
+                    txtPadrao.MaxLength = 255;
+                    break;
+                case TiposDeValidacao.Data:
+                    txtPadrao.Unfocused += (s, ar) => ValidarData();
+                    txtPadrao.TextChanged += (s, ar) => TextoData(ar);
+                    txtPadrao.MaxLength = 10;
+                    break;
+            }
+
+            //else if (AutoValidacao)
+            //    ValidarVazio();
+        }
+
+        private void ValidarData()
+        {
+           
+
+            var Validar = new Validar();
+            if (Validar.Data(txtPadrao.Text))
+            {
+                IsInvalido = false;
+            }
+            else
+            {
+                TextoAviso = "Data invalida!";
+                IsInvalido = true;
+            }
+        }
+
+        private void TextoData(TextChangedEventArgs e)
+        {
+            if(e.OldTextValue != null && e.NewTextValue != null)
+                if (e.NewTextValue.Length < e.OldTextValue.Length)
+                    return;
+
+            if (txtPadrao.Text.Length == 2)
+            {
+                txtPadrao.Text += "/";
+            }
+            if (txtPadrao.Text.Length == 5)
+            {
+                txtPadrao.Text += "/";
+            }
+
+            
         }
 
         private void ValidarVazio()
@@ -143,7 +201,7 @@ namespace VeterinarioConsulta.Controles.TextBox
         private void ValidarEmail()
         {
             var Validar = new Validar();
-            if(Validar.Email(txtPadrao.Text))
+            if (Validar.Email(txtPadrao.Text))
             {
                 IsInvalido = false;
             }

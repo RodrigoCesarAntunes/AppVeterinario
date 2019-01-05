@@ -22,13 +22,13 @@
                 </Grid.RowDefinitions>
 
                 <StackLayout Grid.Column="1" Grid.Row="1">
-                    <textbox:TextBoxValidacao x:Name="txtNome"  AutoValidacao="True" Placeholder="Nome"/>
+                    <textbox:TextBoxValidacao x:Name="txtNome"  ValidarDado="Vazio" Placeholder="Nome"/>
                     <textbox:TextBoxValidacao x:Name="txtIdade"  Placeholder="Idade"/>
-                    <textbox:TextBoxValidacao x:Name="txtEspecie" AutoValidacao="True" Placeholder="Espécie"/>
+                    <textbox:TextBoxValidacao x:Name="txtEspecie" ValidarDado="Vazio" Placeholder="Espécie"/>
                     <textbox:TextBoxValidacao x:Name="txtRaca"  Placeholder="Raça"/>
                     <textbox:TextBoxValidacao x:Name="txtTamanho" Placeholder="Idade"/>
-                    <textbox:TextBoxValidacao x:Name="txtPeso" AutoValidacao="True" Placeholder="Peso"/>
-                    <textbox:TextBoxValidacao x:Name="txtDescricao" AutoValidacao="True" Placeholder="Descrição"/>
+                    <textbox:TextBoxValidacao x:Name="txtPeso" ValidarDado="Vazio" Placeholder="Peso"/>
+                    <textbox:TextBoxValidacao x:Name="txtDescricao" ValidarDado="Vazio" Placeholder="Descrição"/>
                     <botao:BotaoPadrao Text="Confirmar" />
                 </StackLayout>
             </Grid>
