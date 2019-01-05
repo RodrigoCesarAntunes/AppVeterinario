@@ -171,17 +171,39 @@ namespace VeterinarioConsulta.Controles.TextBox
         {
             if(e.OldTextValue != null && e.NewTextValue != null)
                 if (e.NewTextValue.Length < e.OldTextValue.Length)
-                    return;
+                {
+                    if (e.NewTextValue.Length == 3 || e.NewTextValue.Length == 2)
+                    {
+                        txtPadrao.Text = txtPadrao.Text.Replace("/", "");
+                        return;
+                    }
+                    else if (e.NewTextValue.Length == 6 || e.NewTextValue.Length == 5)
+                    {
+                        txtPadrao.Text = txtPadrao.Text.Substring(0, 5);
+                        return;
+                    }
+
+                }
 
             txtPadrao.Text.ApenasInteiro();
 
-            if (!txtPadrao.Text.Contains("/") && txtPadrao.Text.Length == 2)
+            if (txtPadrao.Text.Length == 2 && txtPadrao.Text.Count(c => c == '/') == 0 )
             {
                 txtPadrao.Text += "/";
+            }
+            else if((txtPadrao.Text.Length == 3 && txtPadrao.Text[2] != '/'))
+            {
+                var aux = txtPadrao.Text[2];
+                txtPadrao.Text = txtPadrao.Text.Substring(0,2) + '/' + aux;
             }
             else if (txtPadrao.Text.Count(c => c == '/') < 2 && txtPadrao.Text.Length == 5)
             {
                 txtPadrao.Text += "/";
+            }
+            else if ((txtPadrao.Text.Length == 6 && txtPadrao.Text[5] != '/'))
+            {
+                var aux = txtPadrao.Text[5];
+                txtPadrao.Text = txtPadrao.Text.Substring(0, 5) + '/' + aux;
             }
 
             if (txtPadrao.Text.Contains("."))

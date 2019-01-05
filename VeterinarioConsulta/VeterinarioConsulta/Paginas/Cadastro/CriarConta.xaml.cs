@@ -30,12 +30,29 @@ namespace VeterinarioConsulta.Paginas.Cadastro
 
         private void btnCriarConta_Clicked(object sender, EventArgs e)
         {
+            var isValido = VerificarTxts();
             ExecutarCriarConta();
+
         }
 
         private void ExecutarCriarConta()
         {
-
+           
         }
+
+        private bool VerificarTxts()
+        {
+            txtNome.TextBoxPadrao.Focus();
+            txtSobrenome.TextBoxPadrao.Focus();
+            txtEmail.TextBoxPadrao.Focus();
+            txtNascimento.TextBoxPadrao.Focus();
+            txtSenha.TextBoxPadrao.Focus();
+            txtConfirmarSenha.TextBoxPadrao.Focus();
+            txtConfirmarSenha.Unfocus();
+
+            return !(txtNome.IsInvalido && txtSobrenome.IsInvalido && txtEmail.IsInvalido && txtNascimento.IsInvalido && txtSenha.IsInvalido);
+        }
+
+        
     }
 }
