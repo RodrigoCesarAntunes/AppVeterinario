@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace VeterinarioConsulta.Utils
 {
@@ -68,5 +69,16 @@ namespace VeterinarioConsulta.Utils
         }
 
 
+    }
+
+    public static class TratarTexto
+    {
+        public static string ApenasInteiro(this string texto)
+        {
+            
+            string resultado = string.Concat(texto.Where(e => e >= '0' && e <= '9'));
+            
+            return resultado;
+        }
     }
 }

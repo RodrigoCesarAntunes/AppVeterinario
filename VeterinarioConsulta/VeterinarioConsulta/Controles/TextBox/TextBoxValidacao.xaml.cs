@@ -173,15 +173,24 @@ namespace VeterinarioConsulta.Controles.TextBox
                 if (e.NewTextValue.Length < e.OldTextValue.Length)
                     return;
 
-            if (txtPadrao.Text.Length == 2)
+            txtPadrao.Text.ApenasInteiro();
+
+            if (!txtPadrao.Text.Contains("/") && txtPadrao.Text.Length == 2)
             {
                 txtPadrao.Text += "/";
             }
-            if (txtPadrao.Text.Length == 5)
+            else if (txtPadrao.Text.Count(c => c == '/') < 2 && txtPadrao.Text.Length == 5)
             {
                 txtPadrao.Text += "/";
             }
 
+            if (txtPadrao.Text.Contains("."))
+            {
+                TextoAviso = "Data invalida!";
+                IsInvalido = true;
+            }
+            else if (IsInvalido)
+                IsInvalido = false;
             
         }
 
