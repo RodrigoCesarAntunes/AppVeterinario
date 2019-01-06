@@ -14,7 +14,7 @@ namespace VeterinarioConsulta.Utils
         public async Task AbrirModal(PopupPage modal)
         {
             await PopupNavigation.Instance.PushAsync(modal);
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
         }
 
         public async Task FecharModal()

@@ -18,5 +18,11 @@ namespace VeterinarioConsulta.Controles.Carregamento
 			InitializeComponent ();
             this.CloseWhenBackgroundIsClicked = false;
 		}
-	}
+
+        public string Texto
+        {
+            get { return lblCarregando.Text; }
+            set { lblCarregando.Text = value; }
+        }
+    }
 }

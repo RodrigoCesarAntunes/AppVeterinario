@@ -1,9 +1,4 @@
-﻿using Rg.Plugins.Popup.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using VeterinarioConsulta.Controles.Carregamento;
 using VeterinarioConsulta.Utils;
 using Xamarin.Forms;
@@ -26,7 +21,7 @@ namespace VeterinarioConsulta.Paginas
             if(lblInvalido.IsVisible == true)
             {
                 var Modal = new TratarModal();
-                await Modal.AbrirModal(new ModalDeCarregamento());
+                await Modal.AbrirModal(new ModalDeCarregamento() { Texto = "Entrando..."});
                 App.Current.MainPage = new NavigationPage(new Home()) { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White };
                 await Modal.FecharModal();
             }

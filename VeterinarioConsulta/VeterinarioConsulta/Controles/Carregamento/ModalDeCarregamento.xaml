@@ -8,7 +8,7 @@
         <Frame HorizontalOptions="Center" BackgroundColor="DarkGray" VerticalOptions="Center"  CornerRadius="20" Padding="0" WidthRequest="120">
             <StackLayout >
                 <ActivityIndicator Color="FloralWhite" IsRunning="True" />
-                <Label Text="Carregando..." TextColor="FloralWhite" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Carregando..." TextColor="FloralWhite" FontAttributes="Bold" HorizontalOptions="Center" x:Name="lblCarregando"/>
             </StackLayout>
         </Frame>
         
