@@ -25,10 +25,9 @@
 
             </ListView>
 
-            <controls:FloatingActionButton x:Name="AddMascote" HorizontalOptions="EndAndExpand" Clicked="AddMascote_Clicked"
-                                           WidthRequest="100" HeightRequest="100"  
-                                           VerticalOptions="EndAndExpand" Image="add.png" 
-                                           ButtonColor="White" />
+            <controls:FloatingActionButton x:Name="AddMascote" Clicked="AddMascote_Clicked"  HorizontalOptions="End" HeightRequest="100" WidthRequest="100"
+                                           ButtonColor="White" Image="add.png" />
+
         </StackLayout>
 
     </ContentPage.Content>

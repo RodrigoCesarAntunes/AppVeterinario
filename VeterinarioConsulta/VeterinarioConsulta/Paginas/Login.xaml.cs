@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VeterinarioConsulta.Controles.Carregamento;
+using VeterinarioConsulta.Utils;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,10 +21,15 @@ namespace VeterinarioConsulta.Paginas
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void btnEntrar_Clicked(object sender, EventArgs e)
+        private async void btnEntrar_Clicked(object sender, EventArgs e)
         {
             if(lblInvalido.IsVisible == true)
+            {
+                var Modal = new TratarModal();
+                await Modal.AbrirModal(new ModalDeCarregamento());
                 App.Current.MainPage = new NavigationPage(new Home()) { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White };
+                await Modal.FecharModal();
+            }
 
             lblInvalido.IsVisible = true;
             

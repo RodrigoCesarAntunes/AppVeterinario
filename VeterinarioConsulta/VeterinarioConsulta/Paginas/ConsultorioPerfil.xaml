@@ -29,6 +29,7 @@
 
                 <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Label x:Name="lblEndereco" Text="Endereço: rua xxx" />
+                    <Button Text="Popup" Clicked="Button_Clicked"/>
                 </StackLayout>
 
                 <StackLayout Grid.Column="2" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
