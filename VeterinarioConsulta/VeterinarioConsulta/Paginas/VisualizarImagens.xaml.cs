@@ -25,6 +25,12 @@ namespace VeterinarioConsulta.Paginas
             set { img.Source = value; }
         }
 
+        public ImageSource imagemSourceUri
+        {
+            set { img.Source = value; }
+        }
+
+
         //protected async void PopupPage_BackgroundClicked(object sender, EventArgs e)
         //{
         //    var modal = new TratarModal();

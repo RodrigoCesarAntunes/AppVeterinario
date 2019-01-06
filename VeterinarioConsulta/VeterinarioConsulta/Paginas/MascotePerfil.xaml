@@ -68,7 +68,7 @@
                     <Label Text="Fotos"  TextColor="DimGray" HorizontalOptions="Start" />
                     <BoxView  BackgroundColor="DimGray" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="Fill"/>
 
-                    <FlexLayout x:Name="flexFotos" Margin="0,5,0,0" JustifyContent="Start" Wrap="Wrap"/>
+                    <FlexLayout x:Name="flexFotos" Margin="0,5,0,0" JustifyContent="Center" Wrap="Wrap"/>
                 </StackLayout>
                 
 

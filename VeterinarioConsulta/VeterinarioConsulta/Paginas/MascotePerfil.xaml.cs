@@ -92,35 +92,28 @@ namespace VeterinarioConsulta.Paginas
             var gestureRecognizer = new TapGestureRecognizer();
             gestureRecognizer.Tapped += AbriImagem;
             //var Frame = new Frame() { HeightRequest= 20, WidthRequest = 20};
-            var img = new Image() { Source = "womenWithDog.png", HeightRequest = 60, WidthRequest = 65};
-            var img2 = new Image() { Source = "cachorrinho.png", HeightRequest = 60, WidthRequest = 65};
-            var img3 = new Image() { Source = "womenWithDog.png", HeightRequest = 60, WidthRequest = 65 };
-            var img4 = new Image() { Source = "cachorrinho.png", HeightRequest = 60, WidthRequest = 65};
-            var img5 = new Image() { Source = "womenWithDog.png", HeightRequest = 60, WidthRequest = 65 };
-            var img6 = new Image() { Source = "cachorrinho.png", HeightRequest = 60, WidthRequest = 65};
-            var img7 = new Image() { Source = "womenWithDog.png", HeightRequest = 60, WidthRequest = 65 };
-            var img8 = new Image() { Source = "cachorrinho.png", HeightRequest = 60, WidthRequest = 65};
 
-            img.GestureRecognizers.Add(gestureRecognizer);
-            img2.GestureRecognizers.Add(gestureRecognizer);
-            img3.GestureRecognizers.Add(gestureRecognizer);
-            img4.GestureRecognizers.Add(gestureRecognizer);
-            img5.GestureRecognizers.Add(gestureRecognizer);
-            img6.GestureRecognizers.Add(gestureRecognizer);
-            img7.GestureRecognizers.Add(gestureRecognizer);
-            img8.GestureRecognizers.Add(gestureRecognizer);
-            
-            flexFotos.Children.Add(img);
-            flexFotos.Children.Add(img2);
-            flexFotos.Children.Add(img3);
-            flexFotos.Children.Add(img4);
-            flexFotos.Children.Add(img5);
-            flexFotos.Children.Add(img6);
-            flexFotos.Children.Add(img7);
-            flexFotos.Children.Add(img8);
-            //flexFotos.Children.Add(new Frame() { Content = img, HeightRequest=60, WidthRequest=60});
-            //flexFotos.Children.Add(new Frame() { Content = img2, HeightRequest = 60, WidthRequest = 60 });
-            
+            var imgUrls = new List<string>()
+            {
+                "https://tse1.mm.bing.net/th?id=OIP.9yocuO41upqAIOlDzhhTNAHaFj&pid=Api&w=4608&h=3456&rs=1&p=0",
+                "https://tse4.mm.bing.net/th?id=OIP.fDLMQup89hGLeC31AHJaNgHaE7&pid=Api&w=1920&h=1277&rs=1&p=0",
+                "https://www.caonosso.pt/uploads/racas_galeria/image%5B379%5D.jpg",
+                "https://www.caonosso.pt/uploads/racas_galeria/image[320].jpg",
+                "http://www.casamalana.com/wp-content/uploads/2017/07/20170321152046_IMG_2446.jpg",
+                "https://www.mascotarios.org/wp-content/gallery/perro-de-montana-de-estrela/perro-de-montana-de-estrela92.jpg",
+                "http://1.bp.blogspot.com/-zSkh5w1jpDI/VWfbX5pjYbI/AAAAAAAAAn8/Hfgr9NGQfBk/s1600/Cane-Corso-3.jpg",
+                "https://www.caonosso.pt/uploads/racas_galeria/image%5B378%5D.jpg"
+
+            };
+
+            imgUrls.ForEach(i =>
+                {
+                    var img = new Image() { Source = ImageSource.FromUri(new Uri(i)), Aspect = Aspect.AspectFit };
+                    img.GestureRecognizers.Add(gestureRecognizer);
+                    var frame = new Frame() { HeightRequest = 100, WidthRequest = 60, Content = img };
+                    flexFotos.Children.Add(frame);
+                }
+            );            
         }
 
 
@@ -130,7 +123,8 @@ namespace VeterinarioConsulta.Paginas
             var Modal = new TratarModal();
             var source = img.Source as FileImageSource;
 
-            await Modal.AbrirModal(new VisualizarImagens() { imagemSource = source.File });
+            //await Modal.AbrirModal(new VisualizarImagens() { imagemSource = source.File });
+            await Modal.AbrirModal(new VisualizarImagens() { imagemSourceUri = img.Source });
         }
 
     }
