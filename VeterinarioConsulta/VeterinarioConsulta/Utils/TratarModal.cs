@@ -3,6 +3,7 @@ using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace VeterinarioConsulta.Utils
@@ -13,6 +14,7 @@ namespace VeterinarioConsulta.Utils
         public async Task AbrirModal(PopupPage modal)
         {
             await PopupNavigation.Instance.PushAsync(modal);
+            Thread.Sleep(5000);
         }
 
         public async Task FecharModal()

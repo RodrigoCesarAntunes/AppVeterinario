@@ -4,9 +4,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VeterinarioConsulta.Controles.Carregamento.ModalDeCarregamento">
 
-    <StackLayout BackgroundColor="Transparent" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
-        <ActivityIndicator Color="FloralWhite" IsRunning="True" />
-        <Label Text="Carregando..." TextColor="FloralWhite"/>
+    <StackLayout BackgroundColor="Transparent" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Frame HorizontalOptions="Center" BackgroundColor="DarkGray" VerticalOptions="Center"  CornerRadius="20" Padding="0" WidthRequest="120">
+            <StackLayout >
+                <ActivityIndicator Color="FloralWhite" IsRunning="True" />
+                <Label Text="Carregando..." TextColor="FloralWhite" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Frame>
+        
     </StackLayout>
     
 </pages:PopupPage>
