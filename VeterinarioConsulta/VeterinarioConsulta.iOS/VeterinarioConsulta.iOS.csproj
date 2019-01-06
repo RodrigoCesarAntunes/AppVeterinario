@@ -256,4 +256,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\editar%40x2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cachorrinho.jpg" />
+  </ItemGroup>
 </Project>
