@@ -9,6 +9,8 @@ namespace VeterinarioConsulta.Utils
         Nada,
         Email,
         Vazio,
-        Data
+        Data,
+        CPF,
+        Senha
     }
 }
