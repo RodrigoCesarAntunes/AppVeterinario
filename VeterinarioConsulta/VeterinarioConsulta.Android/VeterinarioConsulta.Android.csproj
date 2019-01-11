@@ -64,14 +64,13 @@
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0" />
     <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0" />
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0" />
-    <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>3.4.0.1009999</Version>
+    <PackageReference Include="Xamarin.Forms.GoogleMaps">
+      <Version>3.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\BotaoPadraoRenderer.cs" />
-    <Compile Include="Renderers\MapaCustomizadoRenderer.cs" />
     <Compile Include="Renderers\TextBoxMultiLinhasRenderer.cs" />
     <Compile Include="Renderers\TextBoxPadraoRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -150,12 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\configuracoes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\pin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\pin.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\pin.png" />
@@ -240,6 +233,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\cachorrinho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\pin.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\pin.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\carrinnhoDeCompras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

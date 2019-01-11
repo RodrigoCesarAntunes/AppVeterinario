@@ -24,7 +24,7 @@ namespace VeterinarioConsulta.iOS
 
             global::Xamarin.Forms.Forms.Init();
 
-            Xamarin.FormsMaps.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyAf7cZszmKYY3QXGn8JMWqd7xAU60_vHWs");
             
             LoadApplication(new App());
 

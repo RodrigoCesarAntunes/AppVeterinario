@@ -25,7 +25,7 @@ namespace VeterinarioConsulta.Droid
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            Xamarin.FormsMaps.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
         protected override void OnStart()
