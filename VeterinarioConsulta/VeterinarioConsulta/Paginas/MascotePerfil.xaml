@@ -2,15 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:textbox="clr-namespace:VeterinarioConsulta.Controles.TextBox"
-             x:Class="VeterinarioConsulta.Paginas.MascotePerfil">
+             x:Class="VeterinarioConsulta.Paginas.MascotePerfil"
+             xmlns:lc="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:lb="clr-namespace:XLabs.Forms.Behaviors;assembly=XLabs.Forms">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Editar" x:Name="btnToolbar" Clicked="ToolbarEditar_Clicked" /> <!--Icon="editar.png"-->
+        <ToolbarItem Text="Editar" x:Name="btnToolbar" Clicked="ToolbarEditar_Clicked" />
+        <!--Icon="editar.png"-->
     </ContentPage.ToolbarItems>
 
 
     <ContentPage.Content>
         <ScrollView>
+
 
             <Grid x:Name="gridContainer">
 
@@ -32,16 +36,16 @@
                         HorizontalOptions="Center" Margin="0,5,0,0" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2">
                     <Image Source="cat.png" />
                 </Frame>
-                
+
 
                 <StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                     <textbox:TextBoxValidacao Titulo="True" TituloTexto="Nome:" x:Name="txtNome"
                                                   Altura="25" Largura="155" FontSize="15" Text="Bola" ValidarDado="Vazio"  />
-                                                                                                       
+
                     <textbox:TextBoxValidacao Titulo="True" TituloTexto="Raça:" x:Name="txtRaca"       
                                                   Altura="25" Largura="155" FontSize="15" Text="Lebre"  />
-                                                                                                       
+
                     <textbox:TextBoxValidacao Titulo="True" TituloTexto="Tamanho:" x:Name="txtTamanho" 
                                                   Altura="25" Largura="155" FontSize="15" Text="Medio"  />
                 </StackLayout>
@@ -68,10 +72,19 @@
                     <Label Text="Fotos"  TextColor="DimGray" HorizontalOptions="Start" />
                     <BoxView  BackgroundColor="DimGray" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="Fill"/>
 
-                    <FlexLayout x:Name="flexFotos" Margin="0,0,0,0" Wrap="Wrap"/>
-                </StackLayout>
-                
 
+                    <lc:GesturesContentView x:Name="gView" ExcludeChildren="False" GestureRecognized="GesturesContentView_GestureRecognized">
+                        <lb:Gestures.Interests>
+                            <lb:GestureCollection>
+                                <lb:GestureInterest GestureType="SingleTap"/>
+                                <lb:GestureInterest GestureType="LongPress"/>
+                                <lb:GestureInterest GestureType="DoubleTap"/>
+                            </lb:GestureCollection>
+                        </lb:Gestures.Interests>
+                        <FlexLayout x:Name="flexFotos" Margin="0,0,0,0" Wrap="Wrap"/>
+                    </lc:GesturesContentView>
+
+                </StackLayout>
             </Grid>
 
         </ScrollView>

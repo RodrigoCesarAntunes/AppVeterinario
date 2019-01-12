@@ -17,5 +17,18 @@ namespace VeterinarioConsulta.Paginas
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
+        public void Voltar()
+        {
+            var pages = Children.GetEnumerator();
+            pages.MoveNext();
+            CurrentPage = pages.Current;
+        }
+
+        public string Tipo()
+        {
+            var pages = Children.GetEnumerator();
+            return CurrentPage.GetType().ToString();
+        }
     }
 }

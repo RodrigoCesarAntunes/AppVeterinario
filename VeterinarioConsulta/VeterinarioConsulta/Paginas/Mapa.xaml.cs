@@ -17,21 +17,27 @@ namespace VeterinarioConsulta.Paginas
     public partial class Mapa : ContentPage
     {
         private MapaCustomizado mapa = null;
+        
+
+        public bool MostrarInfo { get; set; }
 
         public Mapa()
         {
             InitializeComponent();
-            
         }
 
         private void IniciarMapa()
         {
+            if (mapa != null)
+                return;
+
             mapa = new MapaCustomizado();
             mapa.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-23.6581925, -46.7829961),
                 Distance.FromKilometers(1)));
             mapa.UiSettings.MyLocationButtonEnabled = true;
 
             mapa.MapType = MapType.Street;
+            //mapa.InfoWindowClickedK
             stackMapa.Children.Add(mapa);
             MostrarEstabelecimentos();
         }
@@ -101,8 +107,10 @@ namespace VeterinarioConsulta.Paginas
 
         private void BtnVer_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ConsultorioPerfil() { Title="Consultorio 1"});
+            App.Current.MainPage.Navigation.PushAsync(new ConsultorioPerfil() { Title="Consultorio 1"});
         }
+
         
+
     }
 }

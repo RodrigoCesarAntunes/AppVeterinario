@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Support.V4.Content;
 using Android.Support.V4.App;
 using Android;
+using Xamarin.Forms;
+using VeterinarioConsulta.Paginas;
 
 namespace VeterinarioConsulta.Droid
 {
@@ -44,5 +46,17 @@ namespace VeterinarioConsulta.Droid
                 System.Diagnostics.Debug.Print("Permissão concedida");
             }
         }
+
+        public override void OnBackPressed()
+        {
+            var mainpage = App.Current.MainPage;
+            var home = (mainpage.Navigation.NavigationStack[0] as Home);
+
+            if (mainpage.Navigation.NavigationStack.Count == 1 && home.Tipo() != typeof(Mapa).ToString())
+            {
+                home.Voltar(); 
+            }
+        }
+
     }
 }

@@ -35,7 +35,7 @@ namespace VeterinarioConsulta.Paginas
             var animal = args.SelectedItem as Animal;
             AnimaisServico.AnimalAtual = animal;
 
-            Navigation.PushAsync(new MascotePerfil() { Title = animal.Nome});
+            App.Current.MainPage.Navigation.PushAsync(new MascotePerfil() { Title = animal.Nome});
 
             (sender as ListView).SelectedItem = null;
         }

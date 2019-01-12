@@ -8,6 +8,8 @@ using VeterinarioConsulta.Servicos;
 using VeterinarioConsulta.Utils;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XLabs.Forms.Behaviors;
+using XLabs.Forms.Controls;
 
 namespace VeterinarioConsulta.Paginas
 {
@@ -89,10 +91,6 @@ namespace VeterinarioConsulta.Paginas
 
         private void CarregarFotos()
         {
-            var gestureRecognizer = new TapGestureRecognizer();
-            gestureRecognizer.Tapped += AbriImagem;
-            //var Frame = new Frame() { HeightRequest= 20, WidthRequest = 20};
-
             var imgUrls = new List<string>()
             {
                 "https://tse1.mm.bing.net/th?id=OIP.9yocuO41upqAIOlDzhhTNAHaFj&pid=Api&w=4608&h=3456&rs=1&p=0",
@@ -106,15 +104,28 @@ namespace VeterinarioConsulta.Paginas
 
             };
 
+            var gestureRecognizer = new TapGestureRecognizer();
+            gestureRecognizer.Tapped += AbriImagem;
+            
+
             imgUrls.ForEach(i =>
                 {
-                    var img = new Image() { Source = ImageSource.FromUri(new Uri(i)), Aspect = Aspect.AspectFit,
-                        HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand};
+                    var img = new Image()
+                    {
+                        Source = ImageSource.FromUri(new Uri(i)),
+                        Aspect = Aspect.AspectFit,
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        VerticalOptions = LayoutOptions.FillAndExpand,
+                        HeightRequest = 60,
+                        WidthRequest = 60,
+                        Margin = new Thickness(4, 1)
+                    };
                     img.GestureRecognizers.Add(gestureRecognizer);
-                    var frame = new Frame() { HeightRequest = 60, WidthRequest = 60, Padding=1, Content = img };
+                    var frame = new Frame() { HeightRequest = 60, WidthRequest = 60, Padding = 1, Content = img };
                     flexFotos.Children.Add(frame);
                 }
-            );            
+            );
+
         }
 
 
@@ -126,6 +137,25 @@ namespace VeterinarioConsulta.Paginas
 
             //await Modal.AbrirModal(new VisualizarImagens() { imagemSource = source.File });
             await Modal.AbrirModal(new VisualizarImagens() { imagemSourceUri = img.Source });
+        }
+
+        protected void GesturesContentView_GestureRecognized(object sender, GestureResult e)
+        {
+            switch (e.GestureType)
+            {
+                case GestureType.LongPress:
+                    //Add code here
+                    break;
+                case GestureType.SingleTap:
+                    // Add code here                    
+                    break;
+                case GestureType.DoubleTap:
+                    // Add code here
+                    break;
+                default:
+                    break;
+            }
+
         }
 
     }
