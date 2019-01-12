@@ -108,9 +108,10 @@ namespace VeterinarioConsulta.Paginas
 
             imgUrls.ForEach(i =>
                 {
-                    var img = new Image() { Source = ImageSource.FromUri(new Uri(i)), Aspect = Aspect.AspectFit };
+                    var img = new Image() { Source = ImageSource.FromUri(new Uri(i)), Aspect = Aspect.AspectFit,
+                        HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand};
                     img.GestureRecognizers.Add(gestureRecognizer);
-                    var frame = new Frame() { HeightRequest = 100, WidthRequest = 60, Content = img };
+                    var frame = new Frame() { HeightRequest = 60, WidthRequest = 60, Padding=1, Content = img };
                     flexFotos.Children.Add(frame);
                 }
             );            

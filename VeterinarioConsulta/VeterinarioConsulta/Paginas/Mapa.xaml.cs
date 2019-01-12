@@ -21,7 +21,7 @@ namespace VeterinarioConsulta.Paginas
         public Mapa()
         {
             InitializeComponent();
-            IniciarMapa();
+            
         }
 
         private void IniciarMapa()
@@ -34,16 +34,16 @@ namespace VeterinarioConsulta.Paginas
             mapa.MapType = MapType.Street;
             stackMapa.Children.Add(mapa);
             MostrarEstabelecimentos();
-
-           
         }
 
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            IniciarMapa();
+
             mapa.MyLocationEnabled = true;
-            stackInfo.IsVisible = false;
+            EsconderInformacoes();
         }
 
         private void MostrarEstabelecimentos()
@@ -56,7 +56,7 @@ namespace VeterinarioConsulta.Paginas
 
             string img = "";
 
-            enderecos.Select(e =>
+            var pins = enderecos.Select(e =>
             {
                 if (e.TipoDeEstabelecimento == Utils.TiposPins.Patrocinador)
                     img = "carrinnhoDeCompras.png";
@@ -70,11 +70,10 @@ namespace VeterinarioConsulta.Paginas
                     Label = e.Titulo,
                     Address = e.Endereco + ", " + e.Numero
                 };
-                
+
                 mapa.Pins.Add(pin);
                 return pin;
-            });
-
+            }).ToList();
             
             mapa.PinClicked += OnPinClicado;
             mapa.MapClicked += CloseImageButton_Clicked;
@@ -92,12 +91,12 @@ namespace VeterinarioConsulta.Paginas
 
         private void MostrarInformacoes()
         {
-            stackInfo.IsVisible = true;
+            gridInfo.IsVisible = true;
         }
 
         private void EsconderInformacoes()
         {
-            stackInfo.IsVisible = false;
+            gridInfo.IsVisible = false;
         }
 
         private void BtnVer_Clicked(object sender, EventArgs e)

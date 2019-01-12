@@ -8,7 +8,7 @@
             <StackLayout x:Name="stackMapa" Padding="0" 
                          HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 
-            <Grid  x:Name="stackInfo"  Margin="0" BackgroundColor="White"
+            <Grid  x:Name="gridInfo"  Margin="0" BackgroundColor="White"
                    IsVisible="false">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20*" />
