@@ -61,17 +61,27 @@ namespace VeterinarioConsulta.Paginas
             var enderecos = enderecoServico.ObterTodos();
 
             string img = "";
-
+            Color color = Color.Red;
             var pins = enderecos.Select(e =>
             {
                 if (e.TipoDeEstabelecimento == Utils.TiposPins.Patrocinador)
+                {
                     img = "carrinnhoDeCompras.png";
-                else
+                    color = Color.Tomato;
+                }
+                else if (e.TipoDeEstabelecimento == Utils.TiposPins.Veterinario)
+                {
                     img = "hospital.png";
-
+                    color = Color.GreenYellow;
+                }
+                else if(e.TipoDeEstabelecimento == Utils.TiposPins.InstituicaoDeCaridade)
+                {
+                    color = Color.AliceBlue;
+                }
+                
                 var pin = new Pin()
                 {
-                    Icon = BitmapDescriptorFactory.FromBundle(img),
+                    Icon = BitmapDescriptorFactory.DefaultMarker(color),
                     Position = new Position(e.Latitude, e.Longitude),
                     Label = e.Titulo,
                     Address = e.Endereco + ", " + e.Numero
