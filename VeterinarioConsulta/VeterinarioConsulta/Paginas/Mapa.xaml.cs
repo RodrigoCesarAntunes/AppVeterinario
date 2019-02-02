@@ -17,7 +17,7 @@ namespace VeterinarioConsulta.Paginas
     public partial class Mapa : ContentPage
     {
         private MapaCustomizado mapa = null;
-        
+
 
         public bool MostrarInfo { get; set; }
 
@@ -61,17 +61,28 @@ namespace VeterinarioConsulta.Paginas
             var enderecos = enderecoServico.ObterTodos();
 
             string img = "";
-
+            var color = Color.GreenYellow;
             var pins = enderecos.Select(e =>
             {
-                if (e.TipoDeEstabelecimento == Utils.TiposPins.Patrocinador)
+                if (e.TipoDeEstabelecimento == Utils.TiposPins.Veterinario)
+                {
+                    color = Color.GreenYellow;
+                }
+                else if (e.TipoDeEstabelecimento == Utils.TiposPins.Patrocinador)
+                {
                     img = "carrinnhoDeCompras.png";
-                else
+                    color = Color.PaleVioletRed;
+
+                }
+                else if (e.TipoDeEstabelecimento == Utils.TiposPins.InstituicaoDeCaridade)
+                {
                     img = "hospital.png";
+                    color = Color.CadetBlue;
+                }
 
                 var pin = new Pin()
                 {
-                    Icon = BitmapDescriptorFactory.FromBundle(img),
+                    Icon = BitmapDescriptorFactory.DefaultMarker(color), //BitmapDescriptorFactory.FromBundle(img),
                     Position = new Position(e.Latitude, e.Longitude),
                     Label = e.Titulo,
                     Address = e.Endereco + ", " + e.Numero
@@ -80,11 +91,11 @@ namespace VeterinarioConsulta.Paginas
                 mapa.Pins.Add(pin);
                 return pin;
             }).ToList();
-            
+
             mapa.PinClicked += OnPinClicado;
             mapa.MapClicked += CloseImageButton_Clicked;
         }
-        
+
         protected void OnPinClicado(object sender, EventArgs args)
         {
             MostrarInformacoes();
@@ -107,10 +118,10 @@ namespace VeterinarioConsulta.Paginas
 
         private void BtnVer_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage.Navigation.PushAsync(new ConsultorioPerfil() { Title="Consultorio 1"});
+            App.Current.MainPage.Navigation.PushAsync(new ConsultorioPerfil() { Title = "Consultorio 1" });
         }
 
-        
+
 
     }
 }

@@ -51,10 +51,21 @@ namespace VeterinarioConsulta.Droid
         {
             var mainpage = App.Current.MainPage;
             var home = (mainpage.Navigation.NavigationStack[0] as Home);
-
-            if (mainpage.Navigation.NavigationStack.Count == 1 && home.Tipo() != typeof(Mapa).ToString())
+            var itensNavigation = mainpage.Navigation.NavigationStack.Count;
+            if (itensNavigation > 1)
+            {
+                mainpage.Navigation.PopAsync();
+            }
+            else if (itensNavigation == 1 && home.Tipo() != typeof(Mapa).ToString())
             {
                 home.Voltar(); 
+            }
+            else
+            {
+                if (Device.OS == TargetPlatform.Android)
+                {
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                }
             }
         }
 

@@ -22,7 +22,9 @@ namespace VeterinarioConsulta.Paginas
             {
                 var Modal = new TratarModal();
                 await Modal.AbrirModal(new ModalDeCarregamento() { Texto = "Entrando..."});
-                App.Current.MainPage = new NavigationPage(new Home()) { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White };
+                
+                await App.Current.MainPage.Navigation.PushModalAsync(new Home());
+                //App.Current.MainPage = new NavigationPage(new Home()) { BarBackgroundColor = Color.DimGray, BarTextColor = Color.White };
                 await Modal.FecharModal();
             }
 
@@ -44,7 +46,7 @@ namespace VeterinarioConsulta.Paginas
             var tapRecognizerCriarConta = new TapGestureRecognizer();
             tapRecognizerCriarConta.Tapped += (s, ar) => 
             {
-                Navigation.PushAsync( new Cadastro.CriarConta() { Title = "Criar Conta"});
+                App.Current.MainPage.Navigation.PushAsync( new Cadastro.CriarConta() { Title = "Criar Conta"});
             };
             lblCriarConta.GestureRecognizers.Add(tapRecognizerCriarConta);
         }

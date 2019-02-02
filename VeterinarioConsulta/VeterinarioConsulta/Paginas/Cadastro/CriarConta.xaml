@@ -20,7 +20,7 @@
 
                 <Label Grid.Column="1" Grid.Row="0" Text="Preencha os campos a seguir"  FontSize="Medium"
                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-
+ 
                 <StackLayout Grid.Column="1" Grid.Row="1">
                     <textbox:TextBoxValidacao x:Name="txtNome" ValidarDado="Vazio" Placeholder="Nome"/>
                     <textbox:TextBoxValidacao x:Name="txtSobrenome" ValidarDado="Vazio" Placeholder="Sobrenome"/>

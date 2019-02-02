@@ -23,12 +23,14 @@ namespace VeterinarioConsulta.iOS
             Rg.Plugins.Popup.Popup.Init();
 
             global::Xamarin.Forms.Forms.Init();
+            
+            
 
             Xamarin.FormsGoogleMaps.Init("AIzaSyAf7cZszmKYY3QXGn8JMWqd7xAU60_vHWs");
-            
-            LoadApplication(new App());
 
             FloatingActionButtonRenderer.InitRenderer();
+
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
