@@ -7,9 +7,11 @@ namespace VeterinarioConsulta.Controles.TextBox
     public class TextBoxPadrao: Entry
     {
         public static readonly BindableProperty IsInvalidoProperty =
-            BindableProperty.Create<TextBoxPadrao, bool>(
-                p => p.IsInvalido, default(bool)
-                );
+            BindableProperty.Create(nameof(IsInvalido),typeof(bool), typeof(bool));
+
+        //Create<TextBoxPadrao, bool>(
+        //        p => p.IsInvalido, default(bool)
+        //        );
 
         public bool IsInvalido
         {

@@ -19,9 +19,7 @@ namespace VeterinarioConsulta.iOS.Renderers
         {
             base.OnElementChanged(e);
 
-            Element.PropertyChanged += (o, ar) => DefinirCor();
-
-            if(e.OldElement == null)
+            if (e.OldElement == null)
             {
                 Control.Layer.CornerRadius = 10;
                 Control.Layer.BorderWidth = 2f;
@@ -30,6 +28,7 @@ namespace VeterinarioConsulta.iOS.Renderers
 
                 Control.LeftView = new UIKit.UIView(new CGRect(0, 0, 10, 0));
                 //Control.LeftViewMode = new UITextFieldViewMode.Always;
+                Element.PropertyChanged += (o, ar) => DefinirCor();
             }
         }
 
