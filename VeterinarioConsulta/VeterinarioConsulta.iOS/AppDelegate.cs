@@ -1,6 +1,5 @@
 ﻿
 using Foundation;
-using SuaveControls.FloatingActionButton.iOS.Renderers;
 using UIKit;
 
 namespace VeterinarioConsulta.iOS
@@ -20,15 +19,12 @@ namespace VeterinarioConsulta.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Rg.Plugins.Popup.Popup.Init();
-
             global::Xamarin.Forms.Forms.Init();
-            
-            
+
+            Rg.Plugins.Popup.Popup.Init();
 
             Xamarin.FormsGoogleMaps.Init("AIzaSyAf7cZszmKYY3QXGn8JMWqd7xAU60_vHWs");
 
-            FloatingActionButtonRenderer.InitRenderer();
 
             LoadApplication(new App());
 
