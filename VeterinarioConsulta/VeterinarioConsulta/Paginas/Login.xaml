@@ -59,6 +59,7 @@
                     <Label Text="E-mail e/ou senha invalidos" x:Name="lblInvalido" Margin="0,-8,0,0" 
                        FontSize="Small" TextColor="Red" IsVisible="False"></Label>
                     <botao:BotaoPadrao Text="Entrar" Clicked="btnEntrar_Clicked"  x:Name="btnEntrar" Margin="0,1,0,0" />
+                    
                     <Label x:Name="lblCriarConta" Text="Criar Conta" HorizontalOptions="CenterAndExpand"  Margin="0,1,0,0"
                            FontAttributes="Italic" TextColor="Black" FontSize="Medium" />
                     <BoxView BackgroundColor="Black" x:Name="BoxUnderline"

@@ -2,6 +2,7 @@
 using VeterinarioConsulta.Controles.Carregamento;
 using VeterinarioConsulta.Utils;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace VeterinarioConsulta.Paginas
@@ -12,8 +13,13 @@ namespace VeterinarioConsulta.Paginas
 		public Login ()
 		{
 			InitializeComponent ();
-            IniciarBotoesDeLogin();
             NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            IniciarBotoesDeLogin();
         }
 
         private async void btnEntrar_Clicked(object sender, EventArgs e)
@@ -36,24 +42,26 @@ namespace VeterinarioConsulta.Paginas
         {
             var tapRecognizerGoogle = new TapGestureRecognizer();
             tapRecognizerGoogle.Tapped += (s, ar) => BtnEntrarCom_Clicado();
-            BtnLoginComGoogle.GestureRecognizers.Add(tapRecognizerGoogle);
+            if(BtnLoginComGoogle.GestureRecognizers.Count == 0)
+                BtnLoginComGoogle.GestureRecognizers.Add(tapRecognizerGoogle);
 
-            // Essa logica é para que o tamanho da borda a baixo do 
-            // label Criar Conta seja igual a do label
-            BoxUnderline.WidthRequest = (lblCriarConta.Width * 1.3);
+            BoxUnderline.WidthRequest = (lblCriarConta.Width * 1.1);
             
 
             var tapRecognizerCriarConta = new TapGestureRecognizer();
             tapRecognizerCriarConta.Tapped += (s, ar) => 
             {
-                App.Current.MainPage.Navigation.PushAsync( new Cadastro.CriarConta() { Title = "Criar Conta"});
+                Navigation.PushAsync( new Cadastro.CriarConta() { Title = "Criar Conta"});
             };
-            lblCriarConta.GestureRecognizers.Add(tapRecognizerCriarConta);
+            if(lblCriarConta.GestureRecognizers.Count == 0)
+                lblCriarConta.GestureRecognizers.Add(tapRecognizerCriarConta);
         }
 
         private void BtnEntrarCom_Clicado()
         {
             DisplayAlert("teste","google clicado", "cancelar");
         }
+
+      
     }
 }
