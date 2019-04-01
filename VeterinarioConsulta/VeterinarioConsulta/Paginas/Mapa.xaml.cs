@@ -108,12 +108,12 @@ namespace VeterinarioConsulta.Paginas
 
         private void MostrarInformacoes()
         {
-            gridInfo.IsVisible = true;
+            //gridInfo.IsVisible = true;
         }
 
         private void EsconderInformacoes()
         {
-            gridInfo.IsVisible = false;
+            //gridInfo.IsVisible = false;
         }
 
         private void BtnVer_Clicked(object sender, EventArgs e)

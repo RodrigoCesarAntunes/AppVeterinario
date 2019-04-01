@@ -1,36 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:botao="clr-namespace:VeterinarioConsulta.Controles.Botao"
+             xmlns:txt="clr-namespace:VeterinarioConsulta.Controles.TextBox"
              x:Class="VeterinarioConsulta.Paginas.Mapa">
     <ContentPage.Content>
-        <StackLayout x:Name="stackContainer" Padding="0">
-            <StackLayout x:Name="stackMapa" Padding="0" 
+        
+        <Grid x:Name="gridContainer" Padding="0">
+            
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="69*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            
+            <StackLayout x:Name="stackPesquisa" Grid.Column="0" Grid.Row="1" Orientation="Horizontal"
+                         HorizontalOptions="Fill" VerticalOptions="FillAndExpand"> 
+                <txt:TextBoxPadrao  Placeholder="Procure por um endereço" HorizontalOptions="FillAndExpand"/>
+                <botao:BotaoPadrao Text="Ir" WidthRequest="30" />
+            </StackLayout>
+            
+            <StackLayout x:Name="stackMapa" Padding="0" Grid.Row="2" Grid.Column="0"
                          HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
 
-            <Grid  x:Name="gridInfo"  Margin="0" BackgroundColor="White"
-                   IsVisible="false">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="20*" />
-                    <RowDefinition Height="80*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30*"/>
-                    <ColumnDefinition Width="60*" />
-                    <ColumnDefinition Width="10*" />
-                </Grid.ColumnDefinitions>
-
-                <Image Grid.Row="1" Grid.Column="0" Source="womenWithDog.png"  HorizontalOptions="StartAndExpand"  HeightRequest="80" WidthRequest="70"></Image>
-                <Label Grid.Row="0" Grid.Column="1" Text="Consultorio 1" HorizontalOptions="CenterAndExpand"/>
-                <ImageButton Grid.Row="0" Grid.Column="2" x:Name="ibtnClose" Source="close.png" BackgroundColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="30" Clicked="CloseImageButton_Clicked"></ImageButton>
-
-                <StackLayout Grid.Row="1" Grid.Column="1"  Padding="0">
-                    <Label FontSize="Small">Serviços: Vascinação, Castração, Exames gerais, Emergenciasa</Label>
-                    <!--<Label FontSize="Small">Atendimento: Segunda á domingo, 24h/dia</Label>-->
-                    <botao:BotaoPadrao x:Name="btnVer" Text="Ver" HeightRequest="40" WidthRequest="20" Clicked="BtnVer_Clicked" />
-                </StackLayout>
-            </Grid>
-        </StackLayout>
+            
+        </Grid>
 
     </ContentPage.Content>
 </ContentPage>
